@@ -1,0 +1,190 @@
+SUDT ACCESSPORT LOG FILE - Monitor mode
+
+监控: COM3
+创建时间: 2010-04-27, 10:05:25
+计算机名: 齅J奆
+系统版本: Microsoft Windows 2000 Server Service Pack 4 (Build 2195)
+
+#       Time        Function                        Data ( Hex )	
+
+1       [00000000]  IRP_MJ_CREATE                   Port Opened - s
+2       [00000000]  IOCTL_SERIAL_SET_BAUD_RATE      Baud Rate: 9600
+3       [00000000]  IOCTL_SERIAL_SET_LINE_CONTROL   StopBits: 1, Parity: No, DataBits: 8
+4       [00001403]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 60 21 70 65 04 13 88 00 11 BC 8C AC 
+5       [00001500]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 60 21 70 65 02 13 88 00 10 F5 4C 22 
+6       [00001597]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 60 21 70 65 02 00 01 00 08 20 28 11 
+7       [00001660]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 3D 80 01 0B 
+8       [00001660]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 21 70 0B 13 
+9       [00001661]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 04 22 
+10      [00001661]  IRP_MJ_READ                     Length: 0008, Data: 00 17 FD 9A 00 01 81 58 
+11      [00001662]  IRP_MJ_READ                     Length: 0008, Data: 00 01 9D 37 00 00 00 00 
+12      [00001662]  IRP_MJ_READ                     Length: 0008, Data: 00 18 19 79 00 00 35 E8 
+13      [00001663]  IRP_MJ_READ                     Length: 0008, Data: 00 00 00 00 00 00 00 00 
+14      [00001663]  IRP_MJ_READ                     Length: 0005, Data: 4E 20 E5 AD 07 
+15      [00001691]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1D 80 01 0B 
+16      [00001691]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 21 70 0B 13 
+17      [00001692]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 02 
+18      [00001692]  IRP_MJ_READ                     Length: 0005, Data: 6F FF A5 C0 74 
+19      [00001726]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1C 80 01 0B 
+20      [00001727]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 21 70 0B 13 
+21      [00001727]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 01 
+22      [00001728]  IRP_MJ_READ                     Length: 0004, Data: FD 7F 39 38 
+23      [00001734]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+24      [00001735]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 93 97 30 0B 13 
+25      [00001736]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+26      [00001736]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+27      [00001737]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+28      [00001737]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 00 FB 
+29      [00001738]  IRP_MJ_READ                     Length: 0002, Data: 9C D0 
+30      [00003932]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+31      [00003932]  IRP_MJ_READ                     Length: 0008, Data: 13 83 28 82 59 30 0B 13 
+32      [00003933]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+33      [00003933]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 01 3A A2 00 
+34      [00003934]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+35      [00003935]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 01 07 
+36      [00003935]  IRP_MJ_READ                     Length: 0002, Data: A0 CE 
+37      [00005535]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 60 21 70 65 04 13 88 00 11 BC 8C AC 
+38      [00005632]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 60 21 70 65 02 13 88 00 10 F5 4C 22 
+39      [00005729]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 60 21 70 65 02 00 01 00 08 20 28 11 
+40      [00005734]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 3D 80 01 0B 
+41      [00005735]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 21 70 0B 13 
+42      [00005735]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 04 22 
+43      [00005736]  IRP_MJ_READ                     Length: 0008, Data: 00 17 FD 9A 00 01 81 55 
+44      [00005737]  IRP_MJ_READ                     Length: 0008, Data: 00 01 9D 37 00 00 00 00 
+45      [00005737]  IRP_MJ_READ                     Length: 0008, Data: 00 18 19 7C 00 00 35 E8 
+46      [00005738]  IRP_MJ_READ                     Length: 0008, Data: 00 00 00 00 00 00 00 00 
+47      [00005738]  IRP_MJ_READ                     Length: 0005, Data: 4E 20 DF F0 68 
+48      [00005779]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1D 80 01 0B 
+49      [00005780]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 21 70 0B 13 
+50      [00005781]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 02 
+51      [00005781]  IRP_MJ_READ                     Length: 0005, Data: 6F FF A5 C0 74 
+52      [00005880]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1C 80 01 0B 
+53      [00005880]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 21 70 0B 13 
+54      [00005881]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 01 
+55      [00005882]  IRP_MJ_READ                     Length: 0004, Data: FD 7F 39 38 
+56      [00006176]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+57      [00006177]  IRP_MJ_READ                     Length: 0008, Data: 13 78 05 04 22 80 0B 13 
+58      [00006177]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+59      [00006178]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+60      [00006179]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+61      [00006179]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 00 FB 
+62      [00006180]  IRP_MJ_READ                     Length: 0002, Data: 9C 95 
+63      [00007074]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 95 21 50 65 04 13 88 00 11 BC 8C 79 
+64      [00007171]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 95 21 50 65 02 13 88 00 10 F5 4C F7 
+65      [00007268]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 95 21 50 65 02 00 01 00 08 20 28 C4 
+66      [00008517]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 95 21 50 65 04 13 88 00 11 BC 8C 79 
+67      [00008614]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 95 21 50 65 02 13 88 00 10 F5 4C F7 
+68      [00008711]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 95 21 50 65 02 00 01 00 08 20 28 C4 
+69      [00008857]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+70      [00008858]  IRP_MJ_READ                     Length: 0008, Data: 13 78 05 04 07 20 0B 13 
+71      [00008858]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+72      [00008859]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 01 3A A2 00 
+73      [00008859]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+74      [00008860]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 01 07 
+75      [00008860]  IRP_MJ_READ                     Length: 0002, Data: A0 D0 
+76      [00009006]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+77      [00009006]  IRP_MJ_READ                     Length: 0008, Data: 15 03 29 53 09 60 0B 13 
+78      [00009007]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+79      [00009007]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+80      [00009008]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+81      [00009008]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 01 3A 
+82      [00009009]  IRP_MJ_READ                     Length: 0002, Data: 5C 58 
+83      [00009672]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 79 08 50 65 04 13 88 00 11 BC 8C BC 
+84      [00009769]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 79 08 50 65 02 13 88 00 10 F5 4C 32 
+85      [00009866]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 79 08 50 65 02 00 01 00 08 20 28 01 
+86      [00009938]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 3D 80 01 0B 
+87      [00009939]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 79 08 50 0B 13 
+88      [00009939]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 04 22 
+89      [00009940]  IRP_MJ_READ                     Length: 0008, Data: 00 04 FB 64 00 00 69 FA 
+90      [00009940]  IRP_MJ_READ                     Length: 0008, Data: 00 02 16 03 00 00 00 00 
+91      [00009941]  IRP_MJ_READ                     Length: 0008, Data: 00 06 A7 6D 00 00 00 00 
+92      [00009941]  IRP_MJ_READ                     Length: 0008, Data: 00 00 00 00 00 00 00 00 
+93      [00009942]  IRP_MJ_READ                     Length: 0005, Data: 4E 20 84 D6 78 
+94      [00009944]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1D 80 01 0B 
+95      [00009944]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 79 08 50 0B 13 
+96      [00009945]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 02 
+97      [00009946]  IRP_MJ_READ                     Length: 0005, Data: 6F 3F A5 90 F4 
+98      [00009978]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1C 80 01 0B 
+99      [00009978]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 79 08 50 0B 13 
+100     [00009979]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 01 
+101     [00009980]  IRP_MJ_READ                     Length: 0004, Data: FF FE F8 6A 
+102     [00012267]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 78 55 00 65 04 13 88 00 11 BC 8C B0 
+103     [00012364]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 78 55 00 65 02 13 88 00 10 F5 4C 3E 
+104     [00012461]  IRP_MJ_WRITE                    Length: 0030, Data: 12 34 56 00 1E 80 01 0B 00 00 00 00 00 10 0B 13 83 29 78 55 00 65 02 00 01 00 08 20 28 0D 
+105     [00012565]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 3D 80 01 0B 
+106     [00012566]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 78 55 00 0B 13 
+107     [00012566]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 04 22 
+108     [00012567]  IRP_MJ_READ                     Length: 0008, Data: 00 0B 87 A9 00 00 51 D1 
+109     [00012568]  IRP_MJ_READ                     Length: 0008, Data: 00 01 26 E4 00 00 00 00 
+110     [00012568]  IRP_MJ_READ                     Length: 0008, Data: 00 0C 5C BC 00 00 00 00 
+111     [00012569]  IRP_MJ_READ                     Length: 0008, Data: 00 00 00 00 00 00 00 00 
+112     [00012569]  IRP_MJ_READ                     Length: 0005, Data: 4E 20 D1 83 2D 
+113     [00012571]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1D 80 01 0B 
+114     [00012572]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 78 55 00 0B 13 
+115     [00012572]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 02 
+116     [00012573]  IRP_MJ_READ                     Length: 0005, Data: 6F 7F A4 60 49 
+117     [00012592]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 1C 80 01 0B 
+118     [00012593]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 78 55 00 0B 13 
+119     [00012593]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 02 01 
+120     [00012594]  IRP_MJ_READ                     Length: 0004, Data: FD 7F 39 24 
+121     [00014642]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+122     [00014642]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 60 20 50 0B 13 
+123     [00014643]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+124     [00014643]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+125     [00014644]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+126     [00014644]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 01 3A 
+127     [00014645]  IRP_MJ_READ                     Length: 0002, Data: 5C F4 
+128     [00015547]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+129     [00015547]  IRP_MJ_READ                     Length: 0008, Data: 13 78 05 03 96 70 0B 13 
+130     [00015548]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+131     [00015549]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+132     [00015549]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+133     [00015550]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 00 FB 
+134     [00015550]  IRP_MJ_READ                     Length: 0002, Data: 9C D6 
+135     [00018150]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+136     [00018151]  IRP_MJ_READ                     Length: 0008, Data: 13 78 05 03 91 70 0B 13 
+137     [00018151]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+138     [00018152]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 01 3A A2 00 
+139     [00018152]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+140     [00018153]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 00 C6 
+141     [00018153]  IRP_MJ_READ                     Length: 0002, Data: 60 11 
+142     [00018180]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+143     [00018180]  IRP_MJ_READ                     Length: 0008, Data: 13 78 05 05 06 40 0B 13 
+144     [00018181]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+145     [00018181]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+146     [00018182]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+147     [00018183]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 00 FB 
+148     [00018183]  IRP_MJ_READ                     Length: 0002, Data: 9C 70 
+149     [00018422]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+150     [00018422]  IRP_MJ_READ                     Length: 0008, Data: 13 78 05 03 97 50 0B 13 
+151     [00018423]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+152     [00018423]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+153     [00018424]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+154     [00018424]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 01 3A 
+155     [00018425]  IRP_MJ_READ                     Length: 0002, Data: 5C F7 
+156     [00024627]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+157     [00024632]  IRP_MJ_READ                     Length: 0042, Data: 13 83 29 51 66 20 0B 13 83 29 50 69 00 65 2E 3A A7 00 01 00 00 3A A2 00 01 00 01 3A 9F 00 01 00 01 3A A8 00 01 00 00 FB 9C F3 
+158     [00026707]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+159     [00026708]  IRP_MJ_READ                     Length: 0024, Data: 13 78 05 06 79 10 0B 13 83 29 50 69 00 65 2E 3A A7 00 01 00 01 3A A2 00 
+160     [00026710]  IRP_MJ_READ                     Length: 0018, Data: 01 00 01 3A 9F 00 01 00 01 3A A8 00 01 00 00 C6 60 9C 
+161     [00029055]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+162     [00029055]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 76 73 30 0B 13 
+163     [00029056]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+164     [00029056]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 01 3A A2 00 
+165     [00029057]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+166     [00029057]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 00 C6 
+167     [00029058]  IRP_MJ_READ                     Length: 0002, Data: 60 11 
+168     [00031546]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+169     [00031546]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 52 73 20 0B 13 
+170     [00031547]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+171     [00031547]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 00 3A A2 00 
+172     [00031548]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+173     [00031548]  IRP_MJ_READ                     Length: 0008, Data: 01 3A A8 00 01 00 01 3A 
+174     [00031549]  IRP_MJ_READ                     Length: 0002, Data: 5C E5 
+175     [00033204]  IRP_MJ_READ                     Length: 0008, Data: 12 34 56 00 32 80 01 0B 
+176     [00033205]  IRP_MJ_READ                     Length: 0008, Data: 13 83 29 96 28 90 0B 13 
+177     [00033205]  IRP_MJ_READ                     Length: 0008, Data: 83 29 50 69 00 65 2E 3A 
+178     [00033206]  IRP_MJ_READ                     Length: 0008, Data: A7 00 01 00 01 3A A2 00 
+179     [00033206]  IRP_MJ_READ                     Length: 0008, Data: 01 00 01 3A 9F 00 01 00 
+180     [00033207]  IRP_MJ_READ                     Length: 0008, Data: 00 3A A8 00 01 00 00 D6 
+181     [00033207]  IRP_MJ_READ                     Length: 0002, Data: A0 DB 

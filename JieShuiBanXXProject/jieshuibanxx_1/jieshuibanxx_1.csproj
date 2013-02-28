@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{906798F9-3B13-4362-8A39-C9BF4535C54E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>jieshuibanxx_1</RootNamespace>
+    <AssemblyName>jieshuibanxx_1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\bin\Debug\Common.dll</HintPath>
+    </Reference>
+    <Reference Include="data_define, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\data_define\bin\Debug\data_define.dll</HintPath>
+    </Reference>
+    <Reference Include="data_link, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\data_link\bin\Debug\data_link.dll</HintPath>
+    </Reference>
+    <Reference Include="operation, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\operation\bin\Debug\operation.dll</HintPath>
+    </Reference>
+    <Reference Include="sqlconn, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\sqlconn\bin\Debug\sqlconn.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="baseinfo\getwaterkind_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_add.Designer.cs">
+      <DependentUpon>getwaterkind_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_list.Designer.cs">
+      <DependentUpon>getwaterkind_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_update.Designer.cs">
+      <DependentUpon>getwaterkind_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\getwaterkind_view.Designer.cs">
+      <DependentUpon>getwaterkind_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_add.Designer.cs">
+      <DependentUpon>makeoverclass_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_list.Designer.cs">
+      <DependentUpon>makeoverclass_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_update.Designer.cs">
+      <DependentUpon>makeoverclass_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverclass_view.Designer.cs">
+      <DependentUpon>makeoverclass_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_add.Designer.cs">
+      <DependentUpon>makeoverkind_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_list.Designer.cs">
+      <DependentUpon>makeoverkind_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_update.Designer.cs">
+      <DependentUpon>makeoverkind_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\makeoverkind_view.Designer.cs">
+      <DependentUpon>makeoverkind_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\trade_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\trade_add.Designer.cs">
+      <DependentUpon>trade_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\trade_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\trade_list.Designer.cs">
+      <DependentUpon>trade_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\trade_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\trade_update.Designer.cs">
+      <DependentUpon>trade_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\trade_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\trade_view.Designer.cs">
+      <DependentUpon>trade_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\type_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\type_add.Designer.cs">
+      <DependentUpon>type_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\type_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\type_list.Designer.cs">
+      <DependentUpon>type_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\type_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\type_update.Designer.cs">
+      <DependentUpon>type_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="baseinfo\type_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="baseinfo\type_view.Designer.cs">
+      <DependentUpon>type_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\CommandType.cs" />
+    <Compile Include="Common\DataGridDictionary.cs" />
+    <Compile Include="Common\DataGridStyleHelper.cs" />
+    <Compile Include="Common\DetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\DetailForm.Designer.cs">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DMSImageManager.cs" />
+    <Compile Include="Common\ListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\ListForm.Designer.cs">
+      <DependentUpon>ListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ToolBarCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Common\ToolBarCommand.Designer.cs">
+      <DependentUpon>ToolBarCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ToolStripButtonBuilder.cs" />
+    <Compile Include="CustomControl1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl1.Designer.cs">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerControl\wateruser_blur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomerControl\wateruser_blur.Designer.cs">
+      <DependentUpon>wateruser_blur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main.Designer.cs">
+      <DependentUpon>main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainform.Designer.cs">
+      <DependentUpon>mainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="baseinfo\getwaterkind_add.resx">
+      <DependentUpon>getwaterkind_add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\getwaterkind_list.resx">
+      <DependentUpon>getwaterkind_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\getwaterkind_update.resx">
+      <DependentUpon>getwaterkind_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\getwaterkind_view.resx">
+      <DependentUpon>getwaterkind_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverclass_add.resx">
+      <DependentUpon>makeoverclass_add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverclass_list.resx">
+      <DependentUpon>makeoverclass_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverclass_update.resx">
+      <DependentUpon>makeoverclass_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverclass_view.resx">
+      <DependentUpon>makeoverclass_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverkind_add.resx">
+      <DependentUpon>makeoverkind_add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverkind_list.resx">
+      <DependentUpon>makeoverkind_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverkind_update.resx">
+      <DependentUpon>makeoverkind_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\makeoverkind_view.resx">
+      <DependentUpon>makeoverkind_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\trade_add.resx">
+      <DependentUpon>trade_add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\trade_list.resx">
+      <DependentUpon>trade_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\trade_update.resx">
+      <DependentUpon>trade_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\trade_view.resx">
+      <DependentUpon>trade_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\type_add.resx">
+      <DependentUpon>type_add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\type_list.resx">
+      <DependentUpon>type_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\type_update.resx">
+      <DependentUpon>type_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="baseinfo\type_view.resx">
+      <DependentUpon>type_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\DetailForm.resx">
+      <DependentUpon>DetailForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\ListForm.resx">
+      <DependentUpon>ListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl1.resx">
+      <DependentUpon>CustomControl1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerControl\wateruser_blur.resx">
+      <DependentUpon>wateruser_blur.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main.resx">
+      <DependentUpon>main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainform.resx">
+      <DependentUpon>mainform.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wateruser\wateruser_add.resx">
+      <DependentUpon>wateruser_add.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wateruser\wateruser_find.resx">
+      <DependentUpon>wateruser_find.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wateruser\wateruser_list.resx">
+      <DependentUpon>wateruser_list.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wateruser\wateruser_update.resx">
+      <DependentUpon>wateruser_update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wateruser\wateruser_view.resx">
+      <DependentUpon>wateruser_view.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="wateruser\wateruser_add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wateruser\wateruser_add.Designer.cs">
+      <DependentUpon>wateruser_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wateruser\wateruser_find.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wateruser\wateruser_find.Designer.cs">
+      <DependentUpon>wateruser_find.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wateruser\wateruser_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wateruser\wateruser_list.Designer.cs">
+      <DependentUpon>wateruser_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wateruser\wateruser_update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wateruser\wateruser_update.Designer.cs">
+      <DependentUpon>wateruser_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wateruser\wateruser_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wateruser\wateruser_view.Designer.cs">
+      <DependentUpon>wateruser_view.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\module.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\module_select.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_07.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_06.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_08.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_02.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearshuju.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_04.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_21a.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_27.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daochumoban.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_28.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\daorushuju.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_17.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_01.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_22.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_24a.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_23.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_20.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_18.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_19.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_14.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_30.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_05.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new_03.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

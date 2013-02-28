@@ -1,0 +1,27 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YearSummary2003", "YearSummary\YearSummary2003.csproj", "{354F255A-D3EB-4649-96BF-39C84C7E444A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "YearSummary2003Setup", "YearSummary2003Setup\YearSummary2003Setup.vdproj", "{A326887A-731C-4E46-B0EF-4DE17AD60363}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{354F255A-D3EB-4649-96BF-39C84C7E444A}.Debug.ActiveCfg = Debug|.NET
+		{354F255A-D3EB-4649-96BF-39C84C7E444A}.Debug.Build.0 = Debug|.NET
+		{354F255A-D3EB-4649-96BF-39C84C7E444A}.Release.ActiveCfg = Release|.NET
+		{354F255A-D3EB-4649-96BF-39C84C7E444A}.Release.Build.0 = Release|.NET
+		{A326887A-731C-4E46-B0EF-4DE17AD60363}.Debug.ActiveCfg = Debug
+		{A326887A-731C-4E46-B0EF-4DE17AD60363}.Release.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

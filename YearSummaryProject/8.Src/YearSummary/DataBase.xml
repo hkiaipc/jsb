@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <SqlCon>
+    <Server>.</Server>
+    <DataBase>jsb1</DataBase>
+    <uid>sa</uid>
+    <pwd>sa</pwd>
+  </SqlCon>
+ </Root>
