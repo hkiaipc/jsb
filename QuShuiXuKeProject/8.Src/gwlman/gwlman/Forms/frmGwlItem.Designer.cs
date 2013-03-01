@@ -85,6 +85,7 @@
             this.numGwAmount = new System.Windows.Forms.NumericUpDown();
             this.numBwAmount = new System.Windows.Forms.NumericUpDown();
             this.numWellCount = new System.Windows.Forms.NumericUpDown();
+            this.btnView = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -531,6 +532,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.btnView);
             this.tabPage4.Controls.Add(this.btnDeleteAttachment);
             this.tabPage4.Controls.Add(this.label22);
             this.tabPage4.Controls.Add(this.txtRemark);
@@ -547,7 +549,7 @@
             // 
             // btnDeleteAttachment
             // 
-            this.btnDeleteAttachment.Location = new System.Drawing.Point(421, 283);
+            this.btnDeleteAttachment.Location = new System.Drawing.Point(90, 286);
             this.btnDeleteAttachment.Name = "btnDeleteAttachment";
             this.btnDeleteAttachment.Size = new System.Drawing.Size(75, 23);
             this.btnDeleteAttachment.TabIndex = 5;
@@ -570,12 +572,12 @@
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtRemark.Size = new System.Drawing.Size(490, 209);
+            this.txtRemark.Size = new System.Drawing.Size(490, 152);
             this.txtRemark.TabIndex = 1;
             // 
             // btnAddAttachment
             // 
-            this.btnAddAttachment.Location = new System.Drawing.Point(340, 283);
+            this.btnAddAttachment.Location = new System.Drawing.Point(9, 286);
             this.btnAddAttachment.Name = "btnAddAttachment";
             this.btnAddAttachment.Size = new System.Drawing.Size(75, 23);
             this.btnAddAttachment.TabIndex = 4;
@@ -584,7 +586,7 @@
             // 
             // label21
             // 
-            this.label21.Location = new System.Drawing.Point(6, 259);
+            this.label21.Location = new System.Drawing.Point(8, 234);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(206, 23);
             this.label21.TabIndex = 2;
@@ -594,9 +596,9 @@
             // 
             this.txtAttachmentFileName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAttachmentFileName.Location = new System.Drawing.Point(6, 285);
+            this.txtAttachmentFileName.Location = new System.Drawing.Point(8, 260);
             this.txtAttachmentFileName.Name = "txtAttachmentFileName";
-            this.txtAttachmentFileName.Size = new System.Drawing.Size(328, 21);
+            this.txtAttachmentFileName.Size = new System.Drawing.Size(488, 21);
             this.txtAttachmentFileName.TabIndex = 3;
             // 
             // btnCancel
@@ -669,6 +671,15 @@
             this.numWellCount.Name = "numWellCount";
             this.numWellCount.Size = new System.Drawing.Size(100, 21);
             this.numWellCount.TabIndex = 1;
+            // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(171, 286);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(75, 23);
+            this.btnView.TabIndex = 6;
+            this.btnView.Text = "查看";
+            this.btnView.UseVisualStyleBackColor = true;
             // 
             // frmGwlItem
             // 
@@ -759,5 +770,6 @@
         private System.Windows.Forms.NumericUpDown numAskingAmount;
         private System.Windows.Forms.NumericUpDown numBwAmount;
         private System.Windows.Forms.NumericUpDown numWellCount;
+        private System.Windows.Forms.Button btnView;
     }
 }

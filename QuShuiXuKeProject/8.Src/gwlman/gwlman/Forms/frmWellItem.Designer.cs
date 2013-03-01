@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.txtRemark = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtWaterSourceLocation = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.btbOK = new System.Windows.Forms.Button();
+            this.txtSerial = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.numDepth = new System.Windows.Forms.NumericUpDown();
+            this.numDiameter = new System.Windows.Forms.NumericUpDown();
+            this.numExtractAmount = new System.Windows.Forms.NumericUpDown();
+            this.numEffluentAmount = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numDepth)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDiameter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numExtractAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEffluentAmount)).BeginInit();
             this.SuspendLayout();
             // 
             // label17
@@ -58,13 +58,13 @@
             this.label17.TabIndex = 12;
             this.label17.Text = "备注:";
             // 
-            // textBox17
+            // txtRemark
             // 
-            this.textBox17.Location = new System.Drawing.Point(111, 167);
-            this.textBox17.Multiline = true;
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(200, 100);
-            this.textBox17.TabIndex = 13;
+            this.txtRemark.Location = new System.Drawing.Point(111, 167);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(200, 100);
+            this.txtRemark.TabIndex = 13;
             // 
             // label10
             // 
@@ -106,12 +106,12 @@
             this.label14.TabIndex = 2;
             this.label14.Text = "水源地点:";
             // 
-            // textBox14
+            // txtWaterSourceLocation
             // 
-            this.textBox14.Location = new System.Drawing.Point(111, 32);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(200, 21);
-            this.textBox14.TabIndex = 3;
+            this.txtWaterSourceLocation.Location = new System.Drawing.Point(111, 32);
+            this.txtWaterSourceLocation.Name = "txtWaterSourceLocation";
+            this.txtWaterSourceLocation.Size = new System.Drawing.Size(200, 21);
+            this.txtWaterSourceLocation.TabIndex = 3;
             // 
             // label15
             // 
@@ -121,21 +121,21 @@
             this.label15.TabIndex = 0;
             this.label15.Text = "水井编号:";
             // 
-            // textBox15
+            // txtSerial
             // 
-            this.textBox15.Location = new System.Drawing.Point(111, 5);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(200, 21);
-            this.textBox15.TabIndex = 1;
+            this.txtSerial.Location = new System.Drawing.Point(111, 5);
+            this.txtSerial.Name = "txtSerial";
+            this.txtSerial.Size = new System.Drawing.Size(200, 21);
+            this.txtSerial.TabIndex = 1;
             // 
-            // btbOK
+            // btnOK
             // 
-            this.btbOK.Location = new System.Drawing.Point(155, 273);
-            this.btbOK.Name = "btbOK";
-            this.btbOK.Size = new System.Drawing.Size(75, 23);
-            this.btbOK.TabIndex = 14;
-            this.btbOK.Text = "确定";
-            this.btbOK.UseVisualStyleBackColor = true;
+            this.btnOK.Location = new System.Drawing.Point(155, 273);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(75, 23);
+            this.btnOK.TabIndex = 14;
+            this.btnOK.Text = "确定";
+            this.btnOK.UseVisualStyleBackColor = true;
             // 
             // btnCancel
             // 
@@ -146,88 +146,88 @@
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
-            // numericUpDown1
+            // numDepth
             // 
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(111, 60);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numDepth.DecimalPlaces = 2;
+            this.numDepth.Location = new System.Drawing.Point(111, 60);
+            this.numDepth.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(200, 21);
-            this.numericUpDown1.TabIndex = 5;
+            this.numDepth.Name = "numDepth";
+            this.numDepth.Size = new System.Drawing.Size(200, 21);
+            this.numDepth.TabIndex = 5;
             // 
-            // numericUpDown2
+            // numDiameter
             // 
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(111, 87);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.numDiameter.DecimalPlaces = 2;
+            this.numDiameter.Location = new System.Drawing.Point(111, 87);
+            this.numDiameter.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(200, 21);
-            this.numericUpDown2.TabIndex = 7;
+            this.numDiameter.Name = "numDiameter";
+            this.numDiameter.Size = new System.Drawing.Size(200, 21);
+            this.numDiameter.TabIndex = 7;
             // 
-            // numericUpDown3
+            // numExtractAmount
             // 
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(111, 114);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
+            this.numExtractAmount.DecimalPlaces = 2;
+            this.numExtractAmount.Location = new System.Drawing.Point(111, 114);
+            this.numExtractAmount.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(200, 21);
-            this.numericUpDown3.TabIndex = 9;
+            this.numExtractAmount.Name = "numExtractAmount";
+            this.numExtractAmount.Size = new System.Drawing.Size(200, 21);
+            this.numExtractAmount.TabIndex = 9;
             // 
-            // numericUpDown4
+            // numEffluentAmount
             // 
-            this.numericUpDown4.DecimalPlaces = 2;
-            this.numericUpDown4.Location = new System.Drawing.Point(111, 141);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.numEffluentAmount.DecimalPlaces = 2;
+            this.numEffluentAmount.Location = new System.Drawing.Point(111, 141);
+            this.numEffluentAmount.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(200, 21);
-            this.numericUpDown4.TabIndex = 11;
+            this.numEffluentAmount.Name = "numEffluentAmount";
+            this.numEffluentAmount.Size = new System.Drawing.Size(200, 21);
+            this.numEffluentAmount.TabIndex = 11;
             // 
             // frmWellItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(321, 306);
-            this.Controls.Add(this.numericUpDown4);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numEffluentAmount);
+            this.Controls.Add(this.numExtractAmount);
+            this.Controls.Add(this.numDiameter);
+            this.Controls.Add(this.numDepth);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btbOK);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.textBox17);
+            this.Controls.Add(this.txtRemark);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.txtWaterSourceLocation);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox15);
+            this.Controls.Add(this.txtSerial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmWellItem";
             this.Text = "水井";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDepth)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numDiameter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numExtractAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numEffluentAmount)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,21 +236,21 @@
         #endregion
 
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox17;
+        private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtWaterSourceLocation;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.Button btbOK;
+        private System.Windows.Forms.TextBox txtSerial;
+        private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numDepth;
+        private System.Windows.Forms.NumericUpDown numDiameter;
+        private System.Windows.Forms.NumericUpDown numExtractAmount;
+        private System.Windows.Forms.NumericUpDown numEffluentAmount;
 
     }
 }

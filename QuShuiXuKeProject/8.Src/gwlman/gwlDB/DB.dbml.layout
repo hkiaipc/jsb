@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB">
+  <DataContextMoniker Name="/DB" />
+  <nestedChildShapes>
+    <classShape Id="1f526915-4e25-4dc7-bf60-33499f5ad19d" absoluteBounds="1, 2, 2, 5.1579817708333326">
+      <DataClassMoniker Name="/DB/tblGwl" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a967a9d3-9e58-4d03-976e-dee81a4d4c19" absoluteBounds="1.015, 2.46, 1.9700000000000002, 4.597981770833333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0acc465f-65cf-4b7d-bc77-7190f7f9a1b3" absoluteBounds="3.875, 2.5, 2, 2.2914453125">
+      <DataClassMoniker Name="/DB/tblWell" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60c74ecb-8aa8-4f5c-b4aa-a1d1c01bbc70" absoluteBounds="3.89, 2.96, 1.9700000000000002, 1.7314453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3 : 3.64572265625); (3.875 : 3.64572265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB/tblGwl/tblGwl_tblWell" />
+      <nodes>
+        <classShapeMoniker Id="1f526915-4e25-4dc7-bf60-33499f5ad19d" />
+        <classShapeMoniker Id="0acc465f-65cf-4b7d-bc77-7190f7f9a1b3" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
