@@ -1,0 +1,44 @@
+节水办
+--------------------------------------------------------------------------------
+序号            NO
+单位名称        company name
+井数            well count
+用途            usage
+取水量          get water amount
+法人            legal person
+联系人          contact
+联系电话        phone
+单位地址        company address
+区域            area
+编号            serial number
+取水地点        get water location
+取水方式        get water mode
+水源类型        water source mode
+有效期          valid date
+退水地点        back water location
+退水方式        back water mode
+退水量          back water amount
+退水水质要求    back water quality standard
+审批时间        approve date
+电子邮箱        email
+年申请取水量    asking amount of year
+水井            well
+水源地点        well location
+凿井深度        well depth
+孔径            well diameter
+年开采量        extract amount
+出水量          effluent amount
+备注            remark
+--------------------------------------------------------------------------------
+取水            get water, gw
+退水            back water, bw
+水井            well
+单位            unit
+用途            useage
+方式            mode
+地点            place location
+数量            amount
+量              amount
+申请            asking
+出水            effluent
+深度            depth
