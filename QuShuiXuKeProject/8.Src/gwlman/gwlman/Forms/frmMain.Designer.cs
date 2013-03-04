@@ -132,6 +132,7 @@
             this.tsbEdit.Size = new System.Drawing.Size(33, 32);
             this.tsbEdit.Text = "修改";
             this.tsbEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbEdit.Click += new System.EventHandler(this.tsbEdit_Click);
             // 
             // tsbDelete
             // 
@@ -141,6 +142,7 @@
             this.tsbDelete.Size = new System.Drawing.Size(33, 32);
             this.tsbDelete.Text = "删除";
             this.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
             // toolStripSeparator1
             // 

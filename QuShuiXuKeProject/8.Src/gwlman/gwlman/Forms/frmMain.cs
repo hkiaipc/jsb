@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Diagnostics;
 using gwlDB;
 
 namespace gwlman
@@ -50,12 +51,15 @@ namespace gwlman
             frmGwlItem f = new frmGwlItem();
             if (f.ShowDialog() == DialogResult.OK)
             {
+                Fill();
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void Fill()
         {
-
             this.dataGridView1.DataSource = GetGwlDataTable();
         }
 
@@ -73,8 +77,12 @@ namespace gwlman
             return q;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void SetDataGridViewColumns()
         {
+            Debug.Assert(this.dataGridView1.Columns.Count == 0);   
             object[] list = new object[] {
                 "Serial", "编号", typeof(string),
                 "CompanyName", "单位名称", typeof(string),
@@ -116,6 +124,62 @@ namespace gwlman
             this.dataGridView1.AutoGenerateColumns = false;
             SetDataGridViewColumns();
             Fill();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private tblGwl SelectedGwl()
+        {
+            if (this.dataGridView1.SelectedCells.Count > 0)
+            {
+                int rowIndex = this.dataGridView1.SelectedCells[0].RowIndex;
+                tblGwl gwl = (tblGwl)this.dataGridView1.Rows[rowIndex].DataBoundItem;
+                return gwl;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbEdit_Click(object sender, EventArgs e)
+        {
+            tblGwl gwl = SelectedGwl();
+            if (gwl != null)
+            {
+                frmGwlItem f = new frmGwlItem(gwl.GwlID);
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    Fill();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbDelete_Click(object sender, EventArgs e)
+        {
+            tblGwl gwl = SelectedGwl();
+            if (gwl != null)
+            {
+                if (NUnit.UiKit.UserMessage.Ask("确定删除吗?") == DialogResult.Yes )
+                {
+                    DB db = DBFactory.GetDB();
+                    db.tblGwl.DeleteOnSubmit(gwl);
+                    db.SubmitChanges();
+
+                    Fill();
+                }
+            }
+
+
         }
     }
 }

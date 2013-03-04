@@ -19,7 +19,6 @@ namespace gwlman
     {
         private ADEStatus _adeStatus;
         private int _gwlID;
-        private string _path;
 
         public frmGwlItem()
         {
@@ -72,7 +71,20 @@ namespace gwlman
             }
 
             tblGwl g = GetGwl();
+            SetGwlProperties(g);
 
+            GetDB().tblGwl.InsertOnSubmit(g);
+            GetDB().SubmitChanges();
+            return true;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="g"></param>
+        private void SetGwlProperties(tblGwl g)
+        {
             g.Serial = txtSerial.Text;
             g.CompanyName = txtCompanyName.Text;
             g.CompanyAddress = txtCompanyAddress.Text;
@@ -98,15 +110,6 @@ namespace gwlman
             g.WellCount = (int)numWellCount.Value;
 
             g.Remark = txtRemark.Text;
-
-            //g.AttachmentFileName = txtAttachmentFileName.Text;
-            //g.Attachment = GetAttachmentBinary(_path);
-
-
-            GetDB().tblGwl.InsertOnSubmit(g);
-            GetDB().SubmitChanges();
-            return true;
-
         }
 
         /// <summary>
@@ -123,7 +126,15 @@ namespace gwlman
 
         public bool Edit()
         {
-            return false;
+            if (!CheckInput())
+            {
+                return false;
+            }
+
+            SetGwlProperties(GetGwl());
+            GetDB().SubmitChanges();
+
+            return true;
         }
 
         #endregion
@@ -253,12 +264,13 @@ namespace gwlman
             fd.Filter = "*.doc|*.doc";
             if (fd.ShowDialog() == DialogResult.OK)
             {
-                _path = fd.FileName;
-                string filename = Path.GetFileName(_path);
+                string path = fd.FileName;
+                string filename = Path.GetFileName(path);
                 this.txtAttachmentFileName.Text = filename;
 
-                Binary binary = File.ReadAllBytes(_path);
+                Binary binary = File.ReadAllBytes(path);
                 GetGwl().Attachment = binary;
+                GetGwl().AttachmentFileName = filename;
 
                 this.SetAttachmentButtonState();
             }
@@ -329,8 +341,22 @@ namespace gwlman
         /// <param name="e"></param>
         private void frmGwlItem_Load(object sender, EventArgs e)
         {
+            SetFormText();
             this.SetAttachmentButtonState();
             this.AssociateControl();
+
+            if (_adeStatus == ADEStatus.Edit)
+            {
+                Fill();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void SetFormText()
+        {
+            this.Text = string.Format("取水许可 - {0}", _adeStatus == ADEStatus.Add ? "添加" : "修改");
         }
 
         /// <summary>

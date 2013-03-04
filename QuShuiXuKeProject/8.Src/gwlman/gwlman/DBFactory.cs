@@ -13,7 +13,11 @@ namespace gwlman
 
         static public DB GetDB()
         {
-            return new DB();
-        }
+            if (_db == null)
+            {
+                _db = new DB();
+            }
+            return _db;
+        } static private DB _db = null;
     }
 }
