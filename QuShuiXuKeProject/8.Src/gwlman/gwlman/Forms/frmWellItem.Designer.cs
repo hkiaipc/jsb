@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblRemark = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblEffluentAmount = new System.Windows.Forms.Label();
+            this.lblExtractAmount = new System.Windows.Forms.Label();
+            this.lblDiameter = new System.Windows.Forms.Label();
+            this.lblDepth = new System.Windows.Forms.Label();
+            this.lblWaterSourceLocation = new System.Windows.Forms.Label();
             this.txtWaterSourceLocation = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblSerial = new System.Windows.Forms.Label();
             this.txtSerial = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -50,13 +50,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.numEffluentAmount)).BeginInit();
             this.SuspendLayout();
             // 
-            // label17
+            // lblRemark
             // 
-            this.label17.Location = new System.Drawing.Point(5, 170);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 23);
-            this.label17.TabIndex = 12;
-            this.label17.Text = "备注:";
+            this.lblRemark.Location = new System.Drawing.Point(5, 170);
+            this.lblRemark.Name = "lblRemark";
+            this.lblRemark.Size = new System.Drawing.Size(100, 23);
+            this.lblRemark.TabIndex = 12;
+            this.lblRemark.Text = "备注:";
             // 
             // txtRemark
             // 
@@ -66,45 +66,45 @@
             this.txtRemark.Size = new System.Drawing.Size(200, 100);
             this.txtRemark.TabIndex = 13;
             // 
-            // label10
+            // lblEffluentAmount
             // 
-            this.label10.Location = new System.Drawing.Point(5, 143);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "出水流量(m3/s):";
+            this.lblEffluentAmount.Location = new System.Drawing.Point(5, 143);
+            this.lblEffluentAmount.Name = "lblEffluentAmount";
+            this.lblEffluentAmount.Size = new System.Drawing.Size(100, 23);
+            this.lblEffluentAmount.TabIndex = 10;
+            this.lblEffluentAmount.Text = "出水流量(m3/s):";
             // 
-            // label11
+            // lblExtractAmount
             // 
-            this.label11.Location = new System.Drawing.Point(5, 116);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 23);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "年开采量(m3):";
+            this.lblExtractAmount.Location = new System.Drawing.Point(5, 116);
+            this.lblExtractAmount.Name = "lblExtractAmount";
+            this.lblExtractAmount.Size = new System.Drawing.Size(100, 23);
+            this.lblExtractAmount.TabIndex = 8;
+            this.lblExtractAmount.Text = "年开采量(m3):";
             // 
-            // label12
+            // lblDiameter
             // 
-            this.label12.Location = new System.Drawing.Point(5, 89);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 23);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "孔径(m):";
+            this.lblDiameter.Location = new System.Drawing.Point(5, 89);
+            this.lblDiameter.Name = "lblDiameter";
+            this.lblDiameter.Size = new System.Drawing.Size(100, 23);
+            this.lblDiameter.TabIndex = 6;
+            this.lblDiameter.Text = "孔径(m):";
             // 
-            // label13
+            // lblDepth
             // 
-            this.label13.Location = new System.Drawing.Point(5, 62);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 23);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "凿井深(m):";
+            this.lblDepth.Location = new System.Drawing.Point(5, 62);
+            this.lblDepth.Name = "lblDepth";
+            this.lblDepth.Size = new System.Drawing.Size(100, 23);
+            this.lblDepth.TabIndex = 4;
+            this.lblDepth.Text = "凿井深(m):";
             // 
-            // label14
+            // lblWaterSourceLocation
             // 
-            this.label14.Location = new System.Drawing.Point(5, 35);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 23);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "水源地点:";
+            this.lblWaterSourceLocation.Location = new System.Drawing.Point(5, 35);
+            this.lblWaterSourceLocation.Name = "lblWaterSourceLocation";
+            this.lblWaterSourceLocation.Size = new System.Drawing.Size(100, 23);
+            this.lblWaterSourceLocation.TabIndex = 2;
+            this.lblWaterSourceLocation.Text = "水源地点:";
             // 
             // txtWaterSourceLocation
             // 
@@ -113,13 +113,13 @@
             this.txtWaterSourceLocation.Size = new System.Drawing.Size(200, 21);
             this.txtWaterSourceLocation.TabIndex = 3;
             // 
-            // label15
+            // lblSerial
             // 
-            this.label15.Location = new System.Drawing.Point(5, 8);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 23);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "水井编号:";
+            this.lblSerial.Location = new System.Drawing.Point(5, 8);
+            this.lblSerial.Name = "lblSerial";
+            this.lblSerial.Size = new System.Drawing.Size(100, 23);
+            this.lblSerial.TabIndex = 0;
+            this.lblSerial.Text = "水井编号:";
             // 
             // txtSerial
             // 
@@ -136,6 +136,7 @@
             this.btnOK.TabIndex = 14;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // btnCancel
             // 
@@ -209,15 +210,15 @@
             this.Controls.Add(this.numDepth);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.label17);
+            this.Controls.Add(this.lblRemark);
             this.Controls.Add(this.txtRemark);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblEffluentAmount);
+            this.Controls.Add(this.lblExtractAmount);
+            this.Controls.Add(this.lblDiameter);
+            this.Controls.Add(this.lblDepth);
+            this.Controls.Add(this.lblWaterSourceLocation);
             this.Controls.Add(this.txtWaterSourceLocation);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.lblSerial);
             this.Controls.Add(this.txtSerial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -235,15 +236,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblRemark;
         private System.Windows.Forms.TextBox txtRemark;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblEffluentAmount;
+        private System.Windows.Forms.Label lblExtractAmount;
+        private System.Windows.Forms.Label lblDiameter;
+        private System.Windows.Forms.Label lblDepth;
+        private System.Windows.Forms.Label lblWaterSourceLocation;
         private System.Windows.Forms.TextBox txtWaterSourceLocation;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblSerial;
         private System.Windows.Forms.TextBox txtSerial;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;

@@ -14,7 +14,7 @@ using gwlDB;
 
 namespace gwlman
 {
-        using Path = System.IO.Path;
+    using Path = System.IO.Path;
     public partial class frmGwlItem : Form, IAddEdit
     {
         private ADEStatus _adeStatus;
@@ -60,8 +60,17 @@ namespace gwlman
             get { return _adeStatus; }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public bool Add()
         {
+            if (!CheckInput())
+            {
+                return false;
+            }
+
             tblGwl g = GetGwl();
 
             g.Serial = txtSerial.Text;
@@ -97,6 +106,7 @@ namespace gwlman
             GetDB().tblGwl.InsertOnSubmit(g);
             GetDB().SubmitChanges();
             return true;
+
         }
 
         /// <summary>
@@ -201,7 +211,34 @@ namespace gwlman
             txtRemark.Text = g.Remark;
 
             txtAttachmentFileName.Text = g.AttachmentFileName;
+
+            // 
+            // 
+            //dgvWell.DataSource = GetWellDataSource();
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void RefreshWell()
+        {
+            dgvWell.DataSource = GetWellDataSource();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="entitySet"></param>
+        /// <returns></returns>
+        private object GetWellDataSource()
+        {
+            foreach (tblWell w in GetGwl ().tblWell )
+            {
+                
+            }
+            return null;
+        }
+
 
         #endregion
 
@@ -252,7 +289,7 @@ namespace gwlman
         /// </summary>
         void SetAttachmentButtonState()
         {
-            tblGwl gwl = GetGwl() ;
+            tblGwl gwl = GetGwl();
             bool isNull = gwl.Attachment == null;
             this.btnDeleteAttachment.Enabled = !isNull;
             this.btnView.Enabled = !isNull;
@@ -293,6 +330,187 @@ namespace gwlman
         private void frmGwlItem_Load(object sender, EventArgs e)
         {
             this.SetAttachmentButtonState();
+            this.AssociateControl();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckInput()
+        {
+            foreach (Control ctrl in this.GetNotEmptyControls())
+            {
+                if (ctrl is TextBox)
+                {
+                    TextBox txt = (TextBox)ctrl;
+                    if (txt.Text.Trim().Length == 0)
+                    {
+                        //txt.Focus();
+                        FocusControl(txt);
+                        Debug.Assert(txt.Tag != null);
+
+                        string message = GetNotEmptyMessage((Label)txt.Tag);
+                        NUnit.UiKit.UserMessage.DisplayFailure(message + " 不能为空" );
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="control"></param>
+        private void FocusControl(Control control)
+        {
+            foreach (TabPage tp in this.tabControl1.TabPages)
+            {
+                if ( tp.Controls.Contains ( control ))
+                {
+                    tabControl1.SelectedTab = tp;
+                    control.Focus();
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="label"></param>
+        /// <returns></returns>
+        private string GetNotEmptyMessage(Label label)
+        {
+            string text = label.Text;
+            text = text.Replace (":", string.Empty );
+            int b = text.IndexOf('(');
+            int e = text.LastIndexOf(')');
+
+            if (e > b)
+            {
+                text = text.Remove(b, e - b + 1);
+            }
+            return text;
+        }
+
+        private void numGwAmount_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAttachmentFileName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AssociateControl()
+        {
+            txtSerial.Tag = lblSerial;
+            txtCompanyName.Tag = lblCompanyName;
+            txtCompanyAddress.Tag = lblCompanyAddress;
+            txtLegalPerson.Tag = lblLegalPerson;
+            txtContact.Tag = lblContact;
+            txtPhone.Tag = lblPhone;
+            txtEmail.Tag = lblEmail;
+            txtValidDate.Tag = lblValidDate;
+            txtApproveDate.Tag = lblApproveDate;
+
+            txtUsage.Tag = lblUsage;
+            txtGwLocation.Tag = lblGwLocation;
+            txtGwMode.Tag = lblGwMode;
+            txtWaterSourceMode.Tag = lblWaterSourceMode;
+            txtBwLocation.Tag = lblBwLocation;
+            txtBwQuality.Tag = lblBwQuality;
+            txtBwMode.Tag = lblBwMode;
+
+            numAskingAmount.Tag = lblAskingAmount;
+            numGwAmount.Tag = lblGwAmount;
+            numBwAmount.Tag = lblBwAmount;
+
+            numWellCount.Tag = lblWellCount;
+
+            txtRemark.Tag = lblRemark;
+
+            txtAttachmentFileName.Tag = lblAttachment;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        private Control[] GetNotEmptyControls()
+        {
+            if (_notEmptyControls == null)
+            {
+                _notEmptyControls = new Control[] { 
+                    txtSerial,
+                    txtCompanyName,
+                    txtCompanyAddress,
+                    txtLegalPerson,
+                    txtContact,txtPhone,
+                    txtUsage,
+                    txtGwLocation,
+                    txtGwMode,
+                    txtWaterSourceMode, };
+            }
+            return _notEmptyControls;
+        } private Control[] _notEmptyControls = null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnWellAdd_Click(object sender, EventArgs e)
+        {
+            frmWellItem f = new frmWellItem(GetDB());
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                GetGwl().tblWell.Add(f.GetWell());
+
+                // TODO: refresh well source
+                //
+                //dgvWell.DataSource = GetWellDataSource ();
+            }
+        }
+
+        private void btnWellDelete_Click(object sender, EventArgs e)
+        {
+            tblWell well = GetSelectedWell();
+
+            if (well != null)
+            {
+                GetGwl().tblWell.Remove(well);
+            }
+
+            // TODO: refresh well
+            //
+        }
+
+        private tblWell GetSelectedWell()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnWellEdit_Click(object sender, EventArgs e)
+        {
+            tblWell well = GetSelectedWell();
+            if (well != null)
+            {
+                frmWellItem f = new frmWellItem(GetDB(), well);
+                if (f.ShowDialog() == DialogResult.OK)
+                {
+                    // TODO: refresh
+                    //
+                }
+            }
         }
     }
 }

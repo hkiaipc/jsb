@@ -30,44 +30,44 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblApproveDate = new System.Windows.Forms.Label();
             this.txtApproveDate = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblValidDate = new System.Windows.Forms.Label();
             this.txtValidDate = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblPhone = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
             this.txtContact = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblLegalPerson = new System.Windows.Forms.Label();
             this.txtLegalPerson = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.lblCompanyAddress = new System.Windows.Forms.Label();
             this.txtCompanyAddress = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblCompanyName = new System.Windows.Forms.Label();
             this.txtCompanyName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSerial = new System.Windows.Forms.Label();
             this.txtSerial = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.numBwAmount = new System.Windows.Forms.NumericUpDown();
             this.numGwAmount = new System.Windows.Forms.NumericUpDown();
             this.numAskingAmount = new System.Windows.Forms.NumericUpDown();
-            this.label19 = new System.Windows.Forms.Label();
+            this.lblBwQuality = new System.Windows.Forms.Label();
             this.txtBwQuality = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblBwAmount = new System.Windows.Forms.Label();
+            this.lblBwMode = new System.Windows.Forms.Label();
             this.txtBwMode = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblBwLocation = new System.Windows.Forms.Label();
             this.txtBwLocation = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblWaterSourceMode = new System.Windows.Forms.Label();
             this.txtWaterSourceMode = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lblGwMode = new System.Windows.Forms.Label();
             this.txtGwMode = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblGwLocation = new System.Windows.Forms.Label();
             this.txtGwLocation = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblGwAmount = new System.Windows.Forms.Label();
+            this.lblAskingAmount = new System.Windows.Forms.Label();
+            this.lblUsage = new System.Windows.Forms.Label();
             this.txtUsage = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.numWellCount = new System.Windows.Forms.NumericUpDown();
@@ -75,14 +75,14 @@
             this.btnWellEdit = new System.Windows.Forms.Button();
             this.btnWellDelete = new System.Windows.Forms.Button();
             this.dgvWell = new System.Windows.Forms.DataGridView();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lblWellCount = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnView = new System.Windows.Forms.Button();
             this.btnDeleteAttachment = new System.Windows.Forms.Button();
-            this.label22 = new System.Windows.Forms.Label();
+            this.lblRemark = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.btnAddAttachment = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
+            this.lblAttachment = new System.Windows.Forms.Label();
             this.txtAttachmentFileName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
@@ -115,23 +115,23 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.lblApproveDate);
             this.tabPage1.Controls.Add(this.txtApproveDate);
-            this.tabPage1.Controls.Add(this.label10);
+            this.tabPage1.Controls.Add(this.lblValidDate);
             this.tabPage1.Controls.Add(this.txtValidDate);
-            this.tabPage1.Controls.Add(this.label11);
+            this.tabPage1.Controls.Add(this.lblEmail);
             this.tabPage1.Controls.Add(this.txtEmail);
-            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.lblPhone);
             this.tabPage1.Controls.Add(this.txtPhone);
-            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.lblContact);
             this.tabPage1.Controls.Add(this.txtContact);
-            this.tabPage1.Controls.Add(this.label14);
+            this.tabPage1.Controls.Add(this.lblLegalPerson);
             this.tabPage1.Controls.Add(this.txtLegalPerson);
-            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.lblCompanyAddress);
             this.tabPage1.Controls.Add(this.txtCompanyAddress);
-            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.lblCompanyName);
             this.tabPage1.Controls.Add(this.txtCompanyName);
-            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.lblSerial);
             this.tabPage1.Controls.Add(this.txtSerial);
             this.tabPage1.Location = new System.Drawing.Point(4, 21);
             this.tabPage1.Name = "tabPage1";
@@ -141,13 +141,13 @@
             this.tabPage1.Text = "常规";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // lblApproveDate
             // 
-            this.label17.Location = new System.Drawing.Point(6, 225);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(100, 23);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "审批日期:";
+            this.lblApproveDate.Location = new System.Drawing.Point(6, 225);
+            this.lblApproveDate.Name = "lblApproveDate";
+            this.lblApproveDate.Size = new System.Drawing.Size(100, 23);
+            this.lblApproveDate.TabIndex = 16;
+            this.lblApproveDate.Text = "审批日期:";
             // 
             // txtApproveDate
             // 
@@ -158,13 +158,13 @@
             this.txtApproveDate.Size = new System.Drawing.Size(384, 21);
             this.txtApproveDate.TabIndex = 17;
             // 
-            // label10
+            // lblValidDate
             // 
-            this.label10.Location = new System.Drawing.Point(6, 198);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 23);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "有效期:";
+            this.lblValidDate.Location = new System.Drawing.Point(6, 198);
+            this.lblValidDate.Name = "lblValidDate";
+            this.lblValidDate.Size = new System.Drawing.Size(100, 23);
+            this.lblValidDate.TabIndex = 14;
+            this.lblValidDate.Text = "有效期:";
             // 
             // txtValidDate
             // 
@@ -175,13 +175,13 @@
             this.txtValidDate.Size = new System.Drawing.Size(384, 21);
             this.txtValidDate.TabIndex = 15;
             // 
-            // label11
+            // lblEmail
             // 
-            this.label11.Location = new System.Drawing.Point(6, 171);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 23);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "电子邮箱:";
+            this.lblEmail.Location = new System.Drawing.Point(6, 171);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(100, 23);
+            this.lblEmail.TabIndex = 12;
+            this.lblEmail.Text = "电子邮箱:";
             // 
             // txtEmail
             // 
@@ -192,13 +192,13 @@
             this.txtEmail.Size = new System.Drawing.Size(384, 21);
             this.txtEmail.TabIndex = 13;
             // 
-            // label12
+            // lblPhone
             // 
-            this.label12.Location = new System.Drawing.Point(6, 144);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(100, 23);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "联系电话:";
+            this.lblPhone.Location = new System.Drawing.Point(6, 144);
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Size = new System.Drawing.Size(100, 23);
+            this.lblPhone.TabIndex = 10;
+            this.lblPhone.Text = "联系电话:";
             // 
             // txtPhone
             // 
@@ -209,13 +209,13 @@
             this.txtPhone.Size = new System.Drawing.Size(384, 21);
             this.txtPhone.TabIndex = 11;
             // 
-            // label13
+            // lblContact
             // 
-            this.label13.Location = new System.Drawing.Point(6, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(100, 23);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "联系人:";
+            this.lblContact.Location = new System.Drawing.Point(6, 117);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(100, 23);
+            this.lblContact.TabIndex = 8;
+            this.lblContact.Text = "联系人:";
             // 
             // txtContact
             // 
@@ -226,13 +226,13 @@
             this.txtContact.Size = new System.Drawing.Size(384, 21);
             this.txtContact.TabIndex = 9;
             // 
-            // label14
+            // lblLegalPerson
             // 
-            this.label14.Location = new System.Drawing.Point(6, 90);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(100, 23);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "法人:";
+            this.lblLegalPerson.Location = new System.Drawing.Point(6, 90);
+            this.lblLegalPerson.Name = "lblLegalPerson";
+            this.lblLegalPerson.Size = new System.Drawing.Size(100, 23);
+            this.lblLegalPerson.TabIndex = 6;
+            this.lblLegalPerson.Text = "法人:";
             // 
             // txtLegalPerson
             // 
@@ -243,13 +243,13 @@
             this.txtLegalPerson.Size = new System.Drawing.Size(384, 21);
             this.txtLegalPerson.TabIndex = 7;
             // 
-            // label15
+            // lblCompanyAddress
             // 
-            this.label15.Location = new System.Drawing.Point(6, 63);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 23);
-            this.label15.TabIndex = 4;
-            this.label15.Text = "单位地址:";
+            this.lblCompanyAddress.Location = new System.Drawing.Point(6, 63);
+            this.lblCompanyAddress.Name = "lblCompanyAddress";
+            this.lblCompanyAddress.Size = new System.Drawing.Size(100, 23);
+            this.lblCompanyAddress.TabIndex = 4;
+            this.lblCompanyAddress.Text = "单位地址:";
             // 
             // txtCompanyAddress
             // 
@@ -260,13 +260,13 @@
             this.txtCompanyAddress.Size = new System.Drawing.Size(384, 21);
             this.txtCompanyAddress.TabIndex = 5;
             // 
-            // label16
+            // lblCompanyName
             // 
-            this.label16.Location = new System.Drawing.Point(6, 36);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 23);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "单位名称:";
+            this.lblCompanyName.Location = new System.Drawing.Point(6, 36);
+            this.lblCompanyName.Name = "lblCompanyName";
+            this.lblCompanyName.Size = new System.Drawing.Size(100, 23);
+            this.lblCompanyName.TabIndex = 2;
+            this.lblCompanyName.Text = "单位名称:";
             // 
             // txtCompanyName
             // 
@@ -277,13 +277,13 @@
             this.txtCompanyName.Size = new System.Drawing.Size(384, 21);
             this.txtCompanyName.TabIndex = 3;
             // 
-            // label2
+            // lblSerial
             // 
-            this.label2.Location = new System.Drawing.Point(6, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 23);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "编号:";
+            this.lblSerial.Location = new System.Drawing.Point(6, 9);
+            this.lblSerial.Name = "lblSerial";
+            this.lblSerial.Size = new System.Drawing.Size(100, 23);
+            this.lblSerial.TabIndex = 0;
+            this.lblSerial.Text = "编号:";
             // 
             // txtSerial
             // 
@@ -299,22 +299,22 @@
             this.tabPage2.Controls.Add(this.numBwAmount);
             this.tabPage2.Controls.Add(this.numGwAmount);
             this.tabPage2.Controls.Add(this.numAskingAmount);
-            this.tabPage2.Controls.Add(this.label19);
+            this.tabPage2.Controls.Add(this.lblBwQuality);
             this.tabPage2.Controls.Add(this.txtBwQuality);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.lblBwAmount);
+            this.tabPage2.Controls.Add(this.lblBwMode);
             this.tabPage2.Controls.Add(this.txtBwMode);
-            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.lblBwLocation);
             this.tabPage2.Controls.Add(this.txtBwLocation);
-            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.lblWaterSourceMode);
             this.tabPage2.Controls.Add(this.txtWaterSourceMode);
-            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.lblGwMode);
             this.tabPage2.Controls.Add(this.txtGwMode);
-            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Controls.Add(this.lblGwLocation);
             this.tabPage2.Controls.Add(this.txtGwLocation);
-            this.tabPage2.Controls.Add(this.label5);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.label1);
+            this.tabPage2.Controls.Add(this.lblGwAmount);
+            this.tabPage2.Controls.Add(this.lblAskingAmount);
+            this.tabPage2.Controls.Add(this.lblUsage);
             this.tabPage2.Controls.Add(this.txtUsage);
             this.tabPage2.Location = new System.Drawing.Point(4, 21);
             this.tabPage2.Name = "tabPage2";
@@ -349,6 +349,7 @@
             this.numGwAmount.Name = "numGwAmount";
             this.numGwAmount.Size = new System.Drawing.Size(100, 21);
             this.numGwAmount.TabIndex = 5;
+            this.numGwAmount.ValueChanged += new System.EventHandler(this.numGwAmount_ValueChanged);
             // 
             // numAskingAmount
             // 
@@ -363,13 +364,13 @@
             this.numAskingAmount.Size = new System.Drawing.Size(100, 21);
             this.numAskingAmount.TabIndex = 3;
             // 
-            // label19
+            // lblBwQuality
             // 
-            this.label19.Location = new System.Drawing.Point(6, 198);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(100, 23);
-            this.label19.TabIndex = 14;
-            this.label19.Text = "退水水质要求:";
+            this.lblBwQuality.Location = new System.Drawing.Point(6, 198);
+            this.lblBwQuality.Name = "lblBwQuality";
+            this.lblBwQuality.Size = new System.Drawing.Size(100, 23);
+            this.lblBwQuality.TabIndex = 14;
+            this.lblBwQuality.Text = "退水水质要求:";
             // 
             // txtBwQuality
             // 
@@ -380,21 +381,21 @@
             this.txtBwQuality.Size = new System.Drawing.Size(384, 21);
             this.txtBwQuality.TabIndex = 15;
             // 
-            // label18
+            // lblBwAmount
             // 
-            this.label18.Location = new System.Drawing.Point(270, 225);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(120, 23);
-            this.label18.TabIndex = 18;
-            this.label18.Text = "退水量(t/d):";
+            this.lblBwAmount.Location = new System.Drawing.Point(270, 225);
+            this.lblBwAmount.Name = "lblBwAmount";
+            this.lblBwAmount.Size = new System.Drawing.Size(120, 23);
+            this.lblBwAmount.TabIndex = 18;
+            this.lblBwAmount.Text = "退水量(t/d):";
             // 
-            // label8
+            // lblBwMode
             // 
-            this.label8.Location = new System.Drawing.Point(6, 225);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 23);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "退水方式:";
+            this.lblBwMode.Location = new System.Drawing.Point(6, 225);
+            this.lblBwMode.Name = "lblBwMode";
+            this.lblBwMode.Size = new System.Drawing.Size(100, 23);
+            this.lblBwMode.TabIndex = 16;
+            this.lblBwMode.Text = "退水方式:";
             // 
             // txtBwMode
             // 
@@ -405,13 +406,13 @@
             this.txtBwMode.Size = new System.Drawing.Size(100, 21);
             this.txtBwMode.TabIndex = 17;
             // 
-            // label9
+            // lblBwLocation
             // 
-            this.label9.Location = new System.Drawing.Point(6, 171);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(100, 23);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "退水地点:";
+            this.lblBwLocation.Location = new System.Drawing.Point(6, 171);
+            this.lblBwLocation.Name = "lblBwLocation";
+            this.lblBwLocation.Size = new System.Drawing.Size(100, 23);
+            this.lblBwLocation.TabIndex = 12;
+            this.lblBwLocation.Text = "退水地点:";
             // 
             // txtBwLocation
             // 
@@ -422,13 +423,13 @@
             this.txtBwLocation.Size = new System.Drawing.Size(384, 21);
             this.txtBwLocation.TabIndex = 13;
             // 
-            // label6
+            // lblWaterSourceMode
             // 
-            this.label6.Location = new System.Drawing.Point(6, 119);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 23);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "水源类型:";
+            this.lblWaterSourceMode.Location = new System.Drawing.Point(6, 119);
+            this.lblWaterSourceMode.Name = "lblWaterSourceMode";
+            this.lblWaterSourceMode.Size = new System.Drawing.Size(100, 23);
+            this.lblWaterSourceMode.TabIndex = 10;
+            this.lblWaterSourceMode.Text = "水源类型:";
             // 
             // txtWaterSourceMode
             // 
@@ -439,13 +440,13 @@
             this.txtWaterSourceMode.Size = new System.Drawing.Size(384, 21);
             this.txtWaterSourceMode.TabIndex = 11;
             // 
-            // label7
+            // lblGwMode
             // 
-            this.label7.Location = new System.Drawing.Point(6, 92);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 23);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "取水方式:";
+            this.lblGwMode.Location = new System.Drawing.Point(6, 92);
+            this.lblGwMode.Name = "lblGwMode";
+            this.lblGwMode.Size = new System.Drawing.Size(100, 23);
+            this.lblGwMode.TabIndex = 8;
+            this.lblGwMode.Text = "取水方式:";
             // 
             // txtGwMode
             // 
@@ -456,13 +457,13 @@
             this.txtGwMode.Size = new System.Drawing.Size(384, 21);
             this.txtGwMode.TabIndex = 9;
             // 
-            // label4
+            // lblGwLocation
             // 
-            this.label4.Location = new System.Drawing.Point(6, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(100, 23);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "取水地点:";
+            this.lblGwLocation.Location = new System.Drawing.Point(6, 65);
+            this.lblGwLocation.Name = "lblGwLocation";
+            this.lblGwLocation.Size = new System.Drawing.Size(100, 23);
+            this.lblGwLocation.TabIndex = 6;
+            this.lblGwLocation.Text = "取水地点:";
             // 
             // txtGwLocation
             // 
@@ -473,29 +474,29 @@
             this.txtGwLocation.Size = new System.Drawing.Size(384, 21);
             this.txtGwLocation.TabIndex = 7;
             // 
-            // label5
+            // lblGwAmount
             // 
-            this.label5.Location = new System.Drawing.Point(270, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(120, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "年取水量(万m3):";
+            this.lblGwAmount.Location = new System.Drawing.Point(270, 38);
+            this.lblGwAmount.Name = "lblGwAmount";
+            this.lblGwAmount.Size = new System.Drawing.Size(120, 23);
+            this.lblGwAmount.TabIndex = 4;
+            this.lblGwAmount.Text = "年取水量(万m3):";
             // 
-            // label3
+            // lblAskingAmount
             // 
-            this.label3.Location = new System.Drawing.Point(270, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(120, 23);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "年申请取水量(万m3):";
+            this.lblAskingAmount.Location = new System.Drawing.Point(270, 9);
+            this.lblAskingAmount.Name = "lblAskingAmount";
+            this.lblAskingAmount.Size = new System.Drawing.Size(120, 23);
+            this.lblAskingAmount.TabIndex = 2;
+            this.lblAskingAmount.Text = "年申请取水量(万m3):";
             // 
-            // label1
+            // lblUsage
             // 
-            this.label1.Location = new System.Drawing.Point(6, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "用途:";
+            this.lblUsage.Location = new System.Drawing.Point(6, 9);
+            this.lblUsage.Name = "lblUsage";
+            this.lblUsage.Size = new System.Drawing.Size(100, 23);
+            this.lblUsage.TabIndex = 0;
+            this.lblUsage.Text = "用途:";
             // 
             // txtUsage
             // 
@@ -513,7 +514,7 @@
             this.tabPage3.Controls.Add(this.btnWellEdit);
             this.tabPage3.Controls.Add(this.btnWellDelete);
             this.tabPage3.Controls.Add(this.dgvWell);
-            this.tabPage3.Controls.Add(this.label20);
+            this.tabPage3.Controls.Add(this.lblWellCount);
             this.tabPage3.Location = new System.Drawing.Point(4, 21);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -543,6 +544,7 @@
             this.btnWellAdd.TabIndex = 3;
             this.btnWellAdd.Text = "添加";
             this.btnWellAdd.UseVisualStyleBackColor = true;
+            this.btnWellAdd.Click += new System.EventHandler(this.btnWellAdd_Click);
             // 
             // btnWellEdit
             // 
@@ -553,6 +555,7 @@
             this.btnWellEdit.TabIndex = 4;
             this.btnWellEdit.Text = "修改";
             this.btnWellEdit.UseVisualStyleBackColor = true;
+            this.btnWellEdit.Click += new System.EventHandler(this.btnWellEdit_Click);
             // 
             // btnWellDelete
             // 
@@ -563,6 +566,7 @@
             this.btnWellDelete.TabIndex = 5;
             this.btnWellDelete.Text = "删除";
             this.btnWellDelete.UseVisualStyleBackColor = true;
+            this.btnWellDelete.Click += new System.EventHandler(this.btnWellDelete_Click);
             // 
             // dgvWell
             // 
@@ -573,22 +577,22 @@
             this.dgvWell.Size = new System.Drawing.Size(488, 247);
             this.dgvWell.TabIndex = 2;
             // 
-            // label20
+            // lblWellCount
             // 
-            this.label20.Location = new System.Drawing.Point(6, 9);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(100, 23);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "井数:";
+            this.lblWellCount.Location = new System.Drawing.Point(6, 9);
+            this.lblWellCount.Name = "lblWellCount";
+            this.lblWellCount.Size = new System.Drawing.Size(100, 23);
+            this.lblWellCount.TabIndex = 0;
+            this.lblWellCount.Text = "井数:";
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.btnView);
             this.tabPage4.Controls.Add(this.btnDeleteAttachment);
-            this.tabPage4.Controls.Add(this.label22);
+            this.tabPage4.Controls.Add(this.lblRemark);
             this.tabPage4.Controls.Add(this.txtRemark);
             this.tabPage4.Controls.Add(this.btnAddAttachment);
-            this.tabPage4.Controls.Add(this.label21);
+            this.tabPage4.Controls.Add(this.lblAttachment);
             this.tabPage4.Controls.Add(this.txtAttachmentFileName);
             this.tabPage4.Location = new System.Drawing.Point(4, 21);
             this.tabPage4.Name = "tabPage4";
@@ -618,13 +622,13 @@
             this.btnDeleteAttachment.UseVisualStyleBackColor = true;
             this.btnDeleteAttachment.Click += new System.EventHandler(this.btnDeleteAttachment_Click);
             // 
-            // label22
+            // lblRemark
             // 
-            this.label22.Location = new System.Drawing.Point(6, 9);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(206, 23);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "备注:";
+            this.lblRemark.Location = new System.Drawing.Point(6, 9);
+            this.lblRemark.Name = "lblRemark";
+            this.lblRemark.Size = new System.Drawing.Size(206, 23);
+            this.lblRemark.TabIndex = 0;
+            this.lblRemark.Text = "备注:";
             // 
             // txtRemark
             // 
@@ -647,13 +651,13 @@
             this.btnAddAttachment.UseVisualStyleBackColor = true;
             this.btnAddAttachment.Click += new System.EventHandler(this.btnAddAttachment_Click);
             // 
-            // label21
+            // lblAttachment
             // 
-            this.label21.Location = new System.Drawing.Point(8, 234);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(206, 23);
-            this.label21.TabIndex = 2;
-            this.label21.Text = "取水许可申请书:";
+            this.lblAttachment.Location = new System.Drawing.Point(8, 234);
+            this.lblAttachment.Name = "lblAttachment";
+            this.lblAttachment.Size = new System.Drawing.Size(206, 23);
+            this.lblAttachment.TabIndex = 2;
+            this.lblAttachment.Text = "取水许可申请书:";
             // 
             // txtAttachmentFileName
             // 
@@ -664,6 +668,7 @@
             this.txtAttachmentFileName.ReadOnly = true;
             this.txtAttachmentFileName.Size = new System.Drawing.Size(488, 21);
             this.txtAttachmentFileName.TabIndex = 3;
+            this.txtAttachmentFileName.TextChanged += new System.EventHandler(this.txtAttachmentFileName_TextChanged);
             // 
             // btnCancel
             // 
@@ -727,52 +732,52 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsage;
         private System.Windows.Forms.TextBox txtUsage;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSerial;
         private System.Windows.Forms.TextBox txtSerial;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblBwMode;
         private System.Windows.Forms.TextBox txtBwMode;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblBwLocation;
         private System.Windows.Forms.TextBox txtBwLocation;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblWaterSourceMode;
         private System.Windows.Forms.TextBox txtWaterSourceMode;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lblGwMode;
         private System.Windows.Forms.TextBox txtGwMode;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblGwLocation;
         private System.Windows.Forms.TextBox txtGwLocation;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblGwAmount;
+        private System.Windows.Forms.Label lblAskingAmount;
+        private System.Windows.Forms.Label lblValidDate;
         private System.Windows.Forms.TextBox txtValidDate;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblContact;
         private System.Windows.Forms.TextBox txtContact;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblLegalPerson;
         private System.Windows.Forms.TextBox txtLegalPerson;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblCompanyAddress;
         private System.Windows.Forms.TextBox txtCompanyAddress;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblCompanyName;
         private System.Windows.Forms.TextBox txtCompanyName;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblApproveDate;
         private System.Windows.Forms.TextBox txtApproveDate;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblBwQuality;
         private System.Windows.Forms.TextBox txtBwQuality;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblBwAmount;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label lblWellCount;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblAttachment;
         private System.Windows.Forms.TextBox txtAttachmentFileName;
         private System.Windows.Forms.Button btnAddAttachment;
         private System.Windows.Forms.Button btnWellAdd;
         private System.Windows.Forms.Button btnWellEdit;
         private System.Windows.Forms.Button btnWellDelete;
         private System.Windows.Forms.DataGridView dgvWell;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label lblRemark;
         private System.Windows.Forms.TextBox txtRemark;
         private System.Windows.Forms.Button btnDeleteAttachment;
         private System.Windows.Forms.NumericUpDown numGwAmount;
