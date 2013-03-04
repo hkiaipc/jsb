@@ -17,16 +17,21 @@ namespace gwlman
     using Path = System.IO.Path;
     public partial class frmGwlItem : Form, IAddEdit
     {
+        #region Members
         private ADEStatus _adeStatus;
         private int _gwlID;
+        #endregion //Members
 
+        #region frmGwlItem
         public frmGwlItem()
         {
             this._adeStatus = ADEStatus.Add;
 
             InitializeComponent();
         }
+        #endregion //frmGwlItem
 
+        #region frmGwlItem
         /// <summary>
         /// 
         /// </summary>
@@ -38,7 +43,9 @@ namespace gwlman
 
             InitializeComponent();
         }
+        #endregion //frmGwlItem
 
+        #region GetDB
         /// <summary>
         /// 
         /// </summary>
@@ -51,14 +58,16 @@ namespace gwlman
             }
             return _db;
         } private DB _db;
+        #endregion //GetDB
 
-        #region IAddEdit 成员
-
+        #region AdeStatus
         public ADEStatus AdeStatus
         {
             get { return _adeStatus; }
         }
+        #endregion //AdeStatus
 
+        #region Add
         /// <summary>
         /// 
         /// </summary>
@@ -78,7 +87,9 @@ namespace gwlman
             return true;
 
         }
+        #endregion //Add
 
+        #region SetGwlProperties
         /// <summary>
         /// 
         /// </summary>
@@ -111,7 +122,9 @@ namespace gwlman
 
             g.Remark = txtRemark.Text;
         }
+        #endregion //SetGwlProperties
 
+        #region GetAttachmentBinary
         /// <summary>
         /// 
         /// </summary>
@@ -123,7 +136,9 @@ namespace gwlman
             Binary binary = new Binary(bs);
             return binary;
         }
+        #endregion //GetAttachmentBinary
 
+        #region Edit
         public bool Edit()
         {
             if (!CheckInput())
@@ -136,14 +151,16 @@ namespace gwlman
 
             return true;
         }
+        #endregion //Edit
 
-        #endregion
-
+        #region btnCancel_Click
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
+        #endregion //btnCancel_Click
 
+        #region btnOK_Click
         /// <summary>
         /// 
         /// </summary>
@@ -167,10 +184,12 @@ namespace gwlman
                 Close();
             }
         }
+        #endregion //btnOK_Click
 
         #region IAddEdit 成员
 
 
+        #region GetGwl
         private tblGwl GetGwl()
         {
             if (_gwl == null)
@@ -187,7 +206,9 @@ namespace gwlman
             }
             return _gwl;
         } private tblGwl _gwl = null;
+        #endregion //GetGwl
 
+        #region Fill
         /// <summary>
         /// 
         /// </summary>
@@ -225,9 +246,11 @@ namespace gwlman
 
             // 
             // 
-            //dgvWell.DataSource = GetWellDataSource();
+            dgvWell.DataSource = GetWellDataSource();
         }
+        #endregion //Fill
 
+        #region RefreshWell
         /// <summary>
         /// 
         /// </summary>
@@ -235,24 +258,20 @@ namespace gwlman
         {
             dgvWell.DataSource = GetWellDataSource();
         }
+        #endregion //RefreshWell
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="entitySet"></param>
         /// <returns></returns>
         private object GetWellDataSource()
         {
-            foreach (tblWell w in GetGwl ().tblWell )
-            {
-                
-            }
-            return null;
+            return GetGwl().tblWell;
         }
-
 
         #endregion
 
+        #region btnAddAttachment_Click
         /// <summary>
         /// 
         /// </summary>
@@ -275,7 +294,9 @@ namespace gwlman
                 this.SetAttachmentButtonState();
             }
         }
+        #endregion //btnAddAttachment_Click
 
+        #region btnDeleteAttachment_Click
         /// <summary>
         /// 
         /// </summary>
@@ -295,11 +316,13 @@ namespace gwlman
                 SetAttachmentButtonState();
             }
         }
+        #endregion //btnDeleteAttachment_Click
 
+        #region SetAttachmentButtonState
         /// <summary>
         /// 
         /// </summary>
-        void SetAttachmentButtonState()
+        private void SetAttachmentButtonState()
         {
             tblGwl gwl = GetGwl();
             bool isNull = gwl.Attachment == null;
@@ -307,7 +330,9 @@ namespace gwlman
             this.btnView.Enabled = !isNull;
 
         }
+        #endregion //SetAttachmentButtonState
 
+        #region btnView_Click
         /// <summary>
         /// 
         /// </summary>
@@ -333,7 +358,9 @@ namespace gwlman
                 NUnit.UiKit.UserMessage.DisplayFailure("没有附件");
             }
         }
+        #endregion //btnView_Click
 
+        #region frmGwlItem_Load
         /// <summary>
         /// 
         /// </summary>
@@ -342,6 +369,7 @@ namespace gwlman
         private void frmGwlItem_Load(object sender, EventArgs e)
         {
             SetFormText();
+            SetWellDataGridViewColumns();
             this.SetAttachmentButtonState();
             this.AssociateControl();
 
@@ -350,7 +378,9 @@ namespace gwlman
                 Fill();
             }
         }
+        #endregion //frmGwlItem_Load
 
+        #region SetFormText
         /// <summary>
         /// 
         /// </summary>
@@ -358,7 +388,9 @@ namespace gwlman
         {
             this.Text = string.Format("取水许可 - {0}", _adeStatus == ADEStatus.Add ? "添加" : "修改");
         }
+        #endregion //SetFormText
 
+        #region CheckInput
         /// <summary>
         /// 
         /// </summary>
@@ -384,7 +416,9 @@ namespace gwlman
             }
             return true;
         }
+        #endregion //CheckInput
 
+        #region FocusControl
         /// <summary>
         /// 
         /// </summary>
@@ -401,7 +435,9 @@ namespace gwlman
                 }
             }
         }
+        #endregion //FocusControl
 
+        #region GetNotEmptyMessage
         /// <summary>
         /// 
         /// </summary>
@@ -420,17 +456,9 @@ namespace gwlman
             }
             return text;
         }
+        #endregion //GetNotEmptyMessage
 
-        private void numGwAmount_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAttachmentFileName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        #region AssociateControl
         private void AssociateControl()
         {
             txtSerial.Tag = lblSerial;
@@ -461,7 +489,9 @@ namespace gwlman
 
             txtAttachmentFileName.Tag = lblAttachment;
         }
+        #endregion //AssociateControl
 
+        #region GetNotEmptyControls
         /// <summary>
         /// 
         /// </summary>
@@ -483,7 +513,9 @@ namespace gwlman
             }
             return _notEmptyControls;
         } private Control[] _notEmptyControls = null;
+        #endregion //GetNotEmptyControls
 
+        #region btnWellAdd_Click
         /// <summary>
         /// 
         /// </summary>
@@ -496,12 +528,14 @@ namespace gwlman
             {
                 GetGwl().tblWell.Add(f.GetWell());
 
-                // TODO: refresh well source
+                // refresh well source
                 //
-                //dgvWell.DataSource = GetWellDataSource ();
+                RefreshWell();
             }
         }
+        #endregion //btnWellAdd_Click
 
+        #region btnWellDelete_Click
         private void btnWellDelete_Click(object sender, EventArgs e)
         {
             tblWell well = GetSelectedWell();
@@ -511,15 +545,27 @@ namespace gwlman
                 GetGwl().tblWell.Remove(well);
             }
 
-            // TODO: refresh well
+            // refresh well
             //
+            RefreshWell();
         }
+        #endregion //btnWellDelete_Click
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private tblWell GetSelectedWell()
         {
-            throw new NotImplementedException();
+            if (dgvWell.SelectedCells.Count > 0)
+            {
+                int rowIndex = dgvWell.SelectedCells[0].RowIndex;
+                return (tblWell)dgvWell.Rows[rowIndex].DataBoundItem;
+            }
+            return null;
         }
 
+        #region btnWellEdit_Click
         /// <summary>
         /// 
         /// </summary>
@@ -533,9 +579,37 @@ namespace gwlman
                 frmWellItem f = new frmWellItem(GetDB(), well);
                 if (f.ShowDialog() == DialogResult.OK)
                 {
-                    // TODO: refresh
+                    // refresh
                     //
+                    RefreshWell();
                 }
+            }
+        }
+        #endregion //btnWellEdit_Click
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void SetWellDataGridViewColumns()
+        {
+            this.dgvWell.AutoGenerateColumns = false;
+            Debug.Assert(this.dgvWell.Columns.Count == 0);   
+            object[] list = new object[] {
+                "WellSerial", "水井编号", typeof(string),
+                "WellLocation", "水源地点", typeof(string),
+                "WellDepth", "凿井深(m)", typeof(string),
+                "WellDiameter", "孔径(m)", typeof(string),
+                "WellExtractAmount", "年开采量(m3)", typeof(string),
+                "WellEffluentAmount", "出水流量(m3/s)", typeof(string),
+            };
+
+            for (int i = 0; i < list.Length; i += 3)
+            {
+                DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+                col.HeaderText = list[i + 1].ToString();
+                col.DataPropertyName = list[i].ToString();
+                col.Width = 65;
+                this.dgvWell.Columns.Add(col);
             }
         }
     }

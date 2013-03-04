@@ -15,15 +15,18 @@ namespace gwlman
     {
         private tblWell _well;
         private DB _db;
-        public frmWellItem(DB db )
+        public frmWellItem(DB db)
         {
             InitializeComponent();
+
             _db = db;
             _adeStatus = ADEStatus.Add;
         }
 
         public frmWellItem(DB db, tblWell well)
         {
+            InitializeComponent();
+
             _well = well;
             Fill();
         }
@@ -73,6 +76,10 @@ namespace gwlman
         }
 
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private bool CheckInput()
         {
             if (txtSerial.Text.Trim().Length ==0)
@@ -89,6 +96,10 @@ namespace gwlman
             return true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public bool Edit()
         {
             return AddOrEdit();
@@ -119,17 +130,40 @@ namespace gwlman
         /// <param name="e"></param>
         private void btnOK_Click(object sender, EventArgs e)
         {
+            bool r = false;
             if (this._adeStatus == ADEStatus.Add)
             {
-                Add();
+                r = Add();
             }
             else if (this._adeStatus == ADEStatus.Edit)
             {
-                Edit();
+                r = Edit();
             }
 
-            this.DialogResult = DialogResult.OK;
-            this.Close();
+            if (r)
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void frmWellItem_Load(object sender, EventArgs e)
+        {
+            SetFormText();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void SetFormText()
+        {
+            this.Text = string.Format("水井 - {0}",
+                this._adeStatus == ADEStatus.Add ? "添加" : "修改");
         }
     }
 }

@@ -349,7 +349,6 @@
             this.numGwAmount.Name = "numGwAmount";
             this.numGwAmount.Size = new System.Drawing.Size(100, 21);
             this.numGwAmount.TabIndex = 5;
-            this.numGwAmount.ValueChanged += new System.EventHandler(this.numGwAmount_ValueChanged);
             // 
             // numAskingAmount
             // 
@@ -570,9 +569,12 @@
             // 
             // dgvWell
             // 
+            this.dgvWell.AllowUserToAddRows = false;
+            this.dgvWell.AllowUserToDeleteRows = false;
             this.dgvWell.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvWell.Location = new System.Drawing.Point(8, 35);
             this.dgvWell.Name = "dgvWell";
+            this.dgvWell.ReadOnly = true;
             this.dgvWell.RowTemplate.Height = 23;
             this.dgvWell.Size = new System.Drawing.Size(488, 247);
             this.dgvWell.TabIndex = 2;
@@ -668,7 +670,6 @@
             this.txtAttachmentFileName.ReadOnly = true;
             this.txtAttachmentFileName.Size = new System.Drawing.Size(488, 21);
             this.txtAttachmentFileName.TabIndex = 3;
-            this.txtAttachmentFileName.TextChanged += new System.EventHandler(this.txtAttachmentFileName_TextChanged);
             // 
             // btnCancel
             // 

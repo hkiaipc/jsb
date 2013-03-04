@@ -97,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
     <None Include="Properties\Settings.settings">
@@ -114,6 +115,13 @@
       <Project>{B1BFC522-297B-4A5D-B172-5777F948926B}</Project>
       <Name>gwlDB</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resource\btn_edit.bmp" />
+    <Content Include="Resource\Delete.ico" />
+    <None Include="Resource\EditFind.ico" />
+    <Content Include="Resource\New.ico" />
+    <Content Include="Resource\search.bmp" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Code\" />

@@ -229,6 +229,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "水井";
+            this.Load += new System.EventHandler(this.frmWellItem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numDepth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDiameter)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numExtractAmount)).EndInit();

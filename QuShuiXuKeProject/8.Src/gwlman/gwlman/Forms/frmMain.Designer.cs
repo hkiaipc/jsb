@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.mnuFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
@@ -116,7 +115,7 @@
             // 
             // tsbAdd
             // 
-            this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
+            this.tsbAdd.Image = global::gwlman.Properties.Resources.New;
             this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbAdd.Name = "tsbAdd";
             this.tsbAdd.Size = new System.Drawing.Size(33, 32);
@@ -126,8 +125,8 @@
             // 
             // tsbEdit
             // 
-            this.tsbEdit.Image = ((System.Drawing.Image)(resources.GetObject("tsbEdit.Image")));
-            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbEdit.Image = global::gwlman.Properties.Resources.btn_edit;
+            this.tsbEdit.ImageTransparentColor = System.Drawing.Color.Cyan;
             this.tsbEdit.Name = "tsbEdit";
             this.tsbEdit.Size = new System.Drawing.Size(33, 32);
             this.tsbEdit.Text = "修改";
@@ -136,7 +135,7 @@
             // 
             // tsbDelete
             // 
-            this.tsbDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelete.Image")));
+            this.tsbDelete.Image = global::gwlman.Properties.Resources.Delete;
             this.tsbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbDelete.Name = "tsbDelete";
             this.tsbDelete.Size = new System.Drawing.Size(33, 32);
@@ -151,7 +150,7 @@
             // 
             // tsbFind
             // 
-            this.tsbFind.Image = ((System.Drawing.Image)(resources.GetObject("tsbFind.Image")));
+            this.tsbFind.Image = global::gwlman.Properties.Resources.EditFind;
             this.tsbFind.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbFind.Name = "tsbFind";
             this.tsbFind.Size = new System.Drawing.Size(33, 32);
