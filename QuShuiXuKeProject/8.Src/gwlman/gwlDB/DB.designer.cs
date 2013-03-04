@@ -39,7 +39,7 @@ namespace gwlDB
     #endregion
 		
 		public DB() : 
-				base(global::gwlDB.Properties.Settings.Default.jsbGwlManDBConnectionString, mappingSource)
+				base(global::gwlDB.Properties.Settings.Default.jsbGwlManDBConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -115,9 +115,9 @@ namespace gwlDB
 		
 		private string _Usage;
 		
-		private System.Nullable<decimal> _AskingAmount;
+		private decimal _AskingAmount;
 		
-		private System.Nullable<decimal> _GwAmount;
+		private decimal _GwAmount;
 		
 		private string _GwLocation;
 		
@@ -129,7 +129,7 @@ namespace gwlDB
 		
 		private string _BwMode;
 		
-		private System.Nullable<decimal> _BwAmount;
+		private decimal _BwAmount;
 		
 		private string _BwQuality;
 		
@@ -173,9 +173,9 @@ namespace gwlDB
     partial void OnApproveDateChanged();
     partial void OnUsageChanging(string value);
     partial void OnUsageChanged();
-    partial void OnAskingAmountChanging(System.Nullable<decimal> value);
+    partial void OnAskingAmountChanging(decimal value);
     partial void OnAskingAmountChanged();
-    partial void OnGwAmountChanging(System.Nullable<decimal> value);
+    partial void OnGwAmountChanging(decimal value);
     partial void OnGwAmountChanged();
     partial void OnGwLocationChanging(string value);
     partial void OnGwLocationChanged();
@@ -187,7 +187,7 @@ namespace gwlDB
     partial void OnBwLocationChanged();
     partial void OnBwModeChanging(string value);
     partial void OnBwModeChanged();
-    partial void OnBwAmountChanging(System.Nullable<decimal> value);
+    partial void OnBwAmountChanging(decimal value);
     partial void OnBwAmountChanged();
     partial void OnBwQualityChanging(string value);
     partial void OnBwQualityChanged();
@@ -449,8 +449,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_AskingAmount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> AskingAmount
+		[Column(Storage="_AskingAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal AskingAmount
 		{
 			get
 			{
@@ -469,8 +469,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_GwAmount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> GwAmount
+		[Column(Storage="_GwAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal GwAmount
 		{
 			get
 			{
@@ -589,8 +589,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_BwAmount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> BwAmount
+		[Column(Storage="_BwAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal BwAmount
 		{
 			get
 			{
@@ -789,13 +789,13 @@ namespace gwlDB
 		
 		private string _WellLocation;
 		
-		private System.Nullable<decimal> _WellDepth;
+		private decimal _WellDepth;
 		
-		private System.Nullable<decimal> _WellDiameter;
+		private decimal _WellDiameter;
 		
-		private System.Nullable<decimal> _WellExtractAmount;
+		private decimal _WellExtractAmount;
 		
-		private System.Nullable<decimal> _WellEffluentAmount;
+		private decimal _WellEffluentAmount;
 		
 		private string _WellRemark;
 		
@@ -813,13 +813,13 @@ namespace gwlDB
     partial void OnWellSerialChanged();
     partial void OnWellLocationChanging(string value);
     partial void OnWellLocationChanged();
-    partial void OnWellDepthChanging(System.Nullable<decimal> value);
+    partial void OnWellDepthChanging(decimal value);
     partial void OnWellDepthChanged();
-    partial void OnWellDiameterChanging(System.Nullable<decimal> value);
+    partial void OnWellDiameterChanging(decimal value);
     partial void OnWellDiameterChanged();
-    partial void OnWellExtractAmountChanging(System.Nullable<decimal> value);
+    partial void OnWellExtractAmountChanging(decimal value);
     partial void OnWellExtractAmountChanged();
-    partial void OnWellEffluentAmountChanging(System.Nullable<decimal> value);
+    partial void OnWellEffluentAmountChanging(decimal value);
     partial void OnWellEffluentAmountChanged();
     partial void OnWellRemarkChanging(string value);
     partial void OnWellRemarkChanged();
@@ -915,8 +915,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_WellDepth", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> WellDepth
+		[Column(Storage="_WellDepth", DbType="Decimal(18,2) NOT NULL")]
+		public decimal WellDepth
 		{
 			get
 			{
@@ -935,8 +935,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_WellDiameter", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> WellDiameter
+		[Column(Storage="_WellDiameter", DbType="Decimal(18,2) NOT NULL")]
+		public decimal WellDiameter
 		{
 			get
 			{
@@ -955,8 +955,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_WellExtractAmount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> WellExtractAmount
+		[Column(Storage="_WellExtractAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal WellExtractAmount
 		{
 			get
 			{
@@ -975,8 +975,8 @@ namespace gwlDB
 			}
 		}
 		
-		[Column(Storage="_WellEffluentAmount", DbType="Decimal(18,2)")]
-		public System.Nullable<decimal> WellEffluentAmount
+		[Column(Storage="_WellEffluentAmount", DbType="Decimal(18,2) NOT NULL")]
+		public decimal WellEffluentAmount
 		{
 			get
 			{

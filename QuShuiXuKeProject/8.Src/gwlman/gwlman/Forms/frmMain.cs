@@ -20,5 +20,23 @@ namespace gwlman
         {
 
         }
+
+        private void mnuExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbAdd_Click(object sender, EventArgs e)
+        {
+            frmGwlItem f = new frmGwlItem();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+            }
+        }
     }
 }

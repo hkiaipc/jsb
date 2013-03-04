@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Database Name="jsbGwlManDB" Class="DB" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=jsbGwlManDB;User ID=sa" SettingsObjectName="gwlDB.Properties.Settings" SettingsPropertyName="jsbGwlManDBConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=jsbGwlManDB;User ID=sa" SettingsObjectName="gwlDB.Properties.Settings" SettingsPropertyName="jsbGwlManDBConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tblGwl" Member="tblGwl">
     <Type Name="tblGwl">
       <Column Name="GwlID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -15,14 +15,14 @@
       <Column Name="ValidDate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="ApproveDate" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Usage" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="AskingAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="GwAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AskingAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="GwAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="GwLocation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="GwMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="WaterSourceMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="BwLocation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="BwMode" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="BwAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BwAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="BwQuality" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="AttachmentFileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
       <Column Name="Extend" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
@@ -38,10 +38,10 @@
       <Column Name="GwlID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="WellSerial" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
       <Column Name="WellLocation" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
-      <Column Name="WellDepth" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="WellDiameter" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="WellExtractAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
-      <Column Name="WellEffluentAmount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="WellDepth" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="WellDiameter" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="WellExtractAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="WellEffluentAmount" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
       <Column Name="WellRemark" Type="System.String" DbType="NVarChar(2000)" CanBeNull="true" />
       <Association Name="tblGwl_tblWell" Member="tblGwl" ThisKey="GwlID" Type="tblGwl" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>

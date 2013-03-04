@@ -32,5 +32,15 @@ namespace gwlDB.Properties {
                 return ((string)(this["jsbGwlManDBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=jsbGwlManDB;User ID=sa;Password=sa")]
+        public string jsbGwlManDBConnectionString1 {
+            get {
+                return ((string)(this["jsbGwlManDBConnectionString1"]));
+            }
+        }
     }
 }

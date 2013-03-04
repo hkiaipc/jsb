@@ -13,25 +13,25 @@
 有效期          valid date
 审批时间        approve date
 
-井数            well count
 用途            usage
+年申请取水量    asking amount of year
 取水量          get water amount
 取水地点        get water location
 取水方式        get water mode
 水源类型        water source mode
 
-退水地点        back water location
-退水方式        back water mode
-退水量          back water amount
-退水水质要求    back water quality standard
-年申请取水量    asking amount of year
-
 水井            well
+井数            well count
 水源地点        well location
 凿井深度        well depth
 孔径            well diameter
 年开采量        extract amount
 出水量          effluent amount
+
+退水地点        back water location
+退水方式        back water mode
+退水量          back water amount
+退水水质要求    back water quality standard
 
 备注            remark
 --------------------------------------------------------------------------------

@@ -49,6 +49,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSerial = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.numBwAmount = new System.Windows.Forms.NumericUpDown();
+            this.numGwAmount = new System.Windows.Forms.NumericUpDown();
+            this.numAskingAmount = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
             this.txtBwQuality = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -67,12 +70,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsage = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.numWellCount = new System.Windows.Forms.NumericUpDown();
             this.btnWellAdd = new System.Windows.Forms.Button();
             this.btnWellEdit = new System.Windows.Forms.Button();
             this.btnWellDelete = new System.Windows.Forms.Button();
             this.dgvWell = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnView = new System.Windows.Forms.Button();
             this.btnDeleteAttachment = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
@@ -81,21 +86,16 @@
             this.txtAttachmentFileName = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.numAskingAmount = new System.Windows.Forms.NumericUpDown();
-            this.numGwAmount = new System.Windows.Forms.NumericUpDown();
-            this.numBwAmount = new System.Windows.Forms.NumericUpDown();
-            this.numWellCount = new System.Windows.Forms.NumericUpDown();
-            this.btnView = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBwAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGwAmount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAskingAmount)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numWellCount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWell)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAskingAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numGwAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numBwAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numWellCount)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -324,6 +324,45 @@
             this.tabPage2.Text = "取退水";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // numBwAmount
+            // 
+            this.numBwAmount.DecimalPlaces = 2;
+            this.numBwAmount.Location = new System.Drawing.Point(396, 222);
+            this.numBwAmount.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numBwAmount.Name = "numBwAmount";
+            this.numBwAmount.Size = new System.Drawing.Size(100, 21);
+            this.numBwAmount.TabIndex = 19;
+            // 
+            // numGwAmount
+            // 
+            this.numGwAmount.DecimalPlaces = 2;
+            this.numGwAmount.Location = new System.Drawing.Point(396, 36);
+            this.numGwAmount.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numGwAmount.Name = "numGwAmount";
+            this.numGwAmount.Size = new System.Drawing.Size(100, 21);
+            this.numGwAmount.TabIndex = 5;
+            // 
+            // numAskingAmount
+            // 
+            this.numAskingAmount.DecimalPlaces = 2;
+            this.numAskingAmount.Location = new System.Drawing.Point(396, 7);
+            this.numAskingAmount.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numAskingAmount.Name = "numAskingAmount";
+            this.numAskingAmount.Size = new System.Drawing.Size(100, 21);
+            this.numAskingAmount.TabIndex = 3;
+            // 
             // label19
             // 
             this.label19.Location = new System.Drawing.Point(6, 198);
@@ -483,6 +522,18 @@
             this.tabPage3.Text = "水井";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // numWellCount
+            // 
+            this.numWellCount.Location = new System.Drawing.Point(112, 7);
+            this.numWellCount.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.numWellCount.Name = "numWellCount";
+            this.numWellCount.Size = new System.Drawing.Size(100, 21);
+            this.numWellCount.TabIndex = 1;
+            // 
             // btnWellAdd
             // 
             this.btnWellAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -547,6 +598,16 @@
             this.tabPage4.Text = "其他";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btnView
+            // 
+            this.btnView.Location = new System.Drawing.Point(171, 286);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(75, 23);
+            this.btnView.TabIndex = 6;
+            this.btnView.Text = "查看";
+            this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // btnDeleteAttachment
             // 
             this.btnDeleteAttachment.Location = new System.Drawing.Point(90, 286);
@@ -555,6 +616,7 @@
             this.btnDeleteAttachment.TabIndex = 5;
             this.btnDeleteAttachment.Text = "删除";
             this.btnDeleteAttachment.UseVisualStyleBackColor = true;
+            this.btnDeleteAttachment.Click += new System.EventHandler(this.btnDeleteAttachment_Click);
             // 
             // label22
             // 
@@ -583,6 +645,7 @@
             this.btnAddAttachment.TabIndex = 4;
             this.btnAddAttachment.Text = "添加";
             this.btnAddAttachment.UseVisualStyleBackColor = true;
+            this.btnAddAttachment.Click += new System.EventHandler(this.btnAddAttachment_Click);
             // 
             // label21
             // 
@@ -598,6 +661,7 @@
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAttachmentFileName.Location = new System.Drawing.Point(8, 260);
             this.txtAttachmentFileName.Name = "txtAttachmentFileName";
+            this.txtAttachmentFileName.ReadOnly = true;
             this.txtAttachmentFileName.Size = new System.Drawing.Size(488, 21);
             this.txtAttachmentFileName.TabIndex = 3;
             // 
@@ -610,6 +674,7 @@
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "取消";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnOK
             // 
@@ -620,66 +685,7 @@
             this.btnOK.TabIndex = 1;
             this.btnOK.Text = "确定";
             this.btnOK.UseVisualStyleBackColor = true;
-            // 
-            // numAskingAmount
-            // 
-            this.numAskingAmount.DecimalPlaces = 2;
-            this.numAskingAmount.Location = new System.Drawing.Point(396, 7);
-            this.numAskingAmount.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numAskingAmount.Name = "numAskingAmount";
-            this.numAskingAmount.Size = new System.Drawing.Size(100, 21);
-            this.numAskingAmount.TabIndex = 3;
-            // 
-            // numGwAmount
-            // 
-            this.numGwAmount.DecimalPlaces = 2;
-            this.numGwAmount.Location = new System.Drawing.Point(396, 36);
-            this.numGwAmount.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numGwAmount.Name = "numGwAmount";
-            this.numGwAmount.Size = new System.Drawing.Size(100, 21);
-            this.numGwAmount.TabIndex = 5;
-            // 
-            // numBwAmount
-            // 
-            this.numBwAmount.DecimalPlaces = 2;
-            this.numBwAmount.Location = new System.Drawing.Point(396, 222);
-            this.numBwAmount.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numBwAmount.Name = "numBwAmount";
-            this.numBwAmount.Size = new System.Drawing.Size(100, 21);
-            this.numBwAmount.TabIndex = 19;
-            // 
-            // numWellCount
-            // 
-            this.numWellCount.Location = new System.Drawing.Point(112, 7);
-            this.numWellCount.Maximum = new decimal(new int[] {
-            999,
-            0,
-            0,
-            0});
-            this.numWellCount.Name = "numWellCount";
-            this.numWellCount.Size = new System.Drawing.Size(100, 21);
-            this.numWellCount.TabIndex = 1;
-            // 
-            // btnView
-            // 
-            this.btnView.Location = new System.Drawing.Point(171, 286);
-            this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(75, 23);
-            this.btnView.TabIndex = 6;
-            this.btnView.Text = "查看";
-            this.btnView.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // frmGwlItem
             // 
@@ -693,20 +699,23 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmGwlItem";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "取水许可";
+            this.Load += new System.EventHandler(this.frmGwlItem_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBwAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numGwAmount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numAskingAmount)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numWellCount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWell)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numAskingAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numGwAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numBwAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numWellCount)).EndInit();
             this.ResumeLayout(false);
 
         }
