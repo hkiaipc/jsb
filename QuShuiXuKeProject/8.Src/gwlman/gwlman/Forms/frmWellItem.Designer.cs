@@ -224,6 +224,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmWellItem";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "水井";
             ((System.ComponentModel.ISupportInitialize)(this.numDepth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numDiameter)).EndInit();

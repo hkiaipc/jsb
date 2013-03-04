@@ -99,8 +99,8 @@ namespace gwlman
 
             g.Remark = txtRemark.Text;
 
-            g.AttachmentFileName = txtAttachmentFileName.Text;
-            g.Attachment = GetAttachmentBinary(_path);
+            //g.AttachmentFileName = txtAttachmentFileName.Text;
+            //g.Attachment = GetAttachmentBinary(_path);
 
 
             GetDB().tblGwl.InsertOnSubmit(g);
