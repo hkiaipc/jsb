@@ -11,6 +11,11 @@ namespace gwlman
         {
         }
 
+        static public DB CreateDB()
+        {
+            return new DB();
+        }
+
         static public DB GetDB()
         {
             if (_db == null)

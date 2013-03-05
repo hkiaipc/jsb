@@ -54,7 +54,7 @@ namespace gwlman
         {
             if (_db == null)
             {
-                _db = DBFactory.GetDB();
+                _db = DBFactory.CreateDB();
             }
             return _db;
         } private DB _db;
@@ -256,7 +256,9 @@ namespace gwlman
         /// </summary>
         private void RefreshWell()
         {
-            dgvWell.DataSource = GetWellDataSource();
+            BindingSource bs = new BindingSource();
+            bs.DataSource = GetWellDataSource();
+            dgvWell.DataSource = bs;
         }
         #endregion //RefreshWell
 
@@ -409,7 +411,7 @@ namespace gwlman
                         Debug.Assert(txt.Tag != null);
 
                         string message = GetNotEmptyMessage((Label)txt.Tag);
-                        NUnit.UiKit.UserMessage.DisplayFailure(message + " 不能为空" );
+                        NUnit.UiKit.UserMessage.DisplayFailure(message + " 不能为空");
                         return false;
                     }
                 }
@@ -427,7 +429,7 @@ namespace gwlman
         {
             foreach (TabPage tp in this.tabControl1.TabPages)
             {
-                if ( tp.Controls.Contains ( control ))
+                if (tp.Controls.Contains(control))
                 {
                     tabControl1.SelectedTab = tp;
                     control.Focus();
@@ -446,7 +448,7 @@ namespace gwlman
         private string GetNotEmptyMessage(Label label)
         {
             string text = label.Text;
-            text = text.Replace (":", string.Empty );
+            text = text.Replace(":", string.Empty);
             int b = text.IndexOf('(');
             int e = text.LastIndexOf(')');
 
@@ -531,26 +533,37 @@ namespace gwlman
                 // refresh well source
                 //
                 RefreshWell();
+
+                this.dgvWell.CurrentCell = this.dgvWell[0, this.dgvWell.Rows.Count - 1];
             }
         }
         #endregion //btnWellAdd_Click
 
         #region btnWellDelete_Click
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnWellDelete_Click(object sender, EventArgs e)
         {
             tblWell well = GetSelectedWell();
-
             if (well != null)
             {
-                GetGwl().tblWell.Remove(well);
+                if (NUnit.UiKit.UserMessage.Ask("确定删除吗?") == DialogResult.Yes)
+                {
+                    //well.tblGwl = null;
+                    //GetDB().tblWell.DeleteOnSubmit(well);
+                    GetGwl().tblWell.Remove(well);
+                    // refresh well
+                    //
+                    RefreshWell();
+                }
             }
-
-            // refresh well
-            //
-            RefreshWell();
         }
         #endregion //btnWellDelete_Click
 
+        #region GetSelectedWell
         /// <summary>
         /// 
         /// </summary>
@@ -564,6 +577,7 @@ namespace gwlman
             }
             return null;
         }
+        #endregion //GetSelectedWell
 
         #region btnWellEdit_Click
         /// <summary>
@@ -574,26 +588,30 @@ namespace gwlman
         private void btnWellEdit_Click(object sender, EventArgs e)
         {
             tblWell well = GetSelectedWell();
+
             if (well != null)
             {
+                int rowIndex = dgvWell.CurrentRow.Index;
                 frmWellItem f = new frmWellItem(GetDB(), well);
                 if (f.ShowDialog() == DialogResult.OK)
                 {
                     // refresh
                     //
                     RefreshWell();
+                    this.dgvWell.CurrentCell = this.dgvWell[0, rowIndex];
                 }
             }
         }
         #endregion //btnWellEdit_Click
 
+        #region SetWellDataGridViewColumns
         /// <summary>
         /// 
         /// </summary>
         private void SetWellDataGridViewColumns()
         {
             this.dgvWell.AutoGenerateColumns = false;
-            Debug.Assert(this.dgvWell.Columns.Count == 0);   
+            Debug.Assert(this.dgvWell.Columns.Count == 0);
             object[] list = new object[] {
                 "WellSerial", "水井编号", typeof(string),
                 "WellLocation", "水源地点", typeof(string),
@@ -612,5 +630,6 @@ namespace gwlman
                 this.dgvWell.Columns.Add(col);
             }
         }
+        #endregion //SetWellDataGridViewColumns
     }
 }

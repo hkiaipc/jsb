@@ -60,17 +60,17 @@ namespace gwlman
         /// </summary>
         private void Fill()
         {
-            this.dataGridView1.DataSource = GetGwlDataTable();
+            DB db = DBFactory.CreateDB();
+
+            this.dataGridView1.DataSource = GetGwlDataSource(db);
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        private object GetGwlDataTable()
+        private object GetGwlDataSource(DB db)
         {
-            DB db = DBFactory.GetDB();
-
             var q = from s in db.tblGwl
                     select s;
 
@@ -149,6 +149,7 @@ namespace gwlman
         private void tsbEdit_Click(object sender, EventArgs e)
         {
             tblGwl gwl = SelectedGwl();
+
             if (gwl != null)
             {
                 frmGwlItem f = new frmGwlItem(gwl.GwlID);
@@ -171,8 +172,8 @@ namespace gwlman
             {
                 if (NUnit.UiKit.UserMessage.Ask("确定删除吗?") == DialogResult.Yes )
                 {
-                    DB db = DBFactory.GetDB();
-                    db.tblGwl.DeleteOnSubmit(gwl);
+                    DB db = DBFactory.CreateDB();
+                    db.tblGwl.DeleteOnSubmit(db.tblGwl.Single(c => c.GwlID == gwl.GwlID));
                     db.SubmitChanges();
 
                     Fill();
