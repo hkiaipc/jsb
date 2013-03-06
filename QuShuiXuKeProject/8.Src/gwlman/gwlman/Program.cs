@@ -35,7 +35,8 @@ namespace gwlman
         [STAThread]
         static void Main()
         {
-            new App().Run();
+            App app = new App();
+            app.Run();
         }
     }
 }

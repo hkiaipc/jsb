@@ -650,7 +650,7 @@
             this.btnAddAttachment.Name = "btnAddAttachment";
             this.btnAddAttachment.Size = new System.Drawing.Size(75, 23);
             this.btnAddAttachment.TabIndex = 4;
-            this.btnAddAttachment.Text = "添加";
+            this.btnAddAttachment.Text = "选择...";
             this.btnAddAttachment.UseVisualStyleBackColor = true;
             this.btnAddAttachment.Click += new System.EventHandler(this.btnAddAttachment_Click);
             // 

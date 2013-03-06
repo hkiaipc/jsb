@@ -43,11 +43,11 @@ namespace gwlman
                 ComboBox cmb = new ComboBox();
                 _conditionCount++;
                 cmb.Name = _cmbBaseName + _conditionCount;
-                SetCmbConditionDataSource(cmb);
                 cmb.Size = cmbCondition1.Size;
                 cmb.Location = GetConditionLocation(_conditionCount);
                 cmb.DropDownStyle = ComboBoxStyle.DropDownList;
                 this.Controls.Add(cmb);
+                SetCmbConditionDataSource(cmb);
 
                 TextBox txt = new TextBox();
                 txt.Name = _txtBaseName + _conditionCount;
@@ -74,6 +74,27 @@ namespace gwlman
             cmb.DisplayMember = "Key";
             cmb.ValueMember = "Value";
             cmb.DataSource = GetConditionDataSource();
+            cmb.SelectedIndex = GetConditionSelectedIndex(_conditionCount - 1);
+        }
+
+        private int GetConditionSelectedIndex(int count)
+        {
+            List<int> list=new List<int>();
+            for (int i = 1; i <= count; i++)
+            {
+                string name = _cmbBaseName + i;
+                ComboBox cmb = (ComboBox)this.Controls.Find(name, false)[0];
+                list.Add(cmb.SelectedIndex);
+            }
+
+            for (int idx = 0; idx < ConditionDataSourceProvider.GetConditionCount(); idx++)
+            {
+                if (!list.Contains(idx))
+                {
+                    return idx;
+                }
+            }
+            return 0;
         }
 
         private Point GetTxtLocation(int n)

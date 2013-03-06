@@ -128,6 +128,11 @@ namespace gwlman
     public class ConditionDataSourceProvider
     {
 
+        static public int GetConditionCount()
+        {
+            return 9;
+        }
+
         static public KeyValueCollection CreateDataSource()
         {
             KeyValueCollection kvs = new KeyValueCollection();
