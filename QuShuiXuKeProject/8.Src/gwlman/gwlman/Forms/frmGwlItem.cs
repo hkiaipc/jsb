@@ -268,7 +268,7 @@ namespace gwlman
         /// <returns></returns>
         private object GetWellDataSource()
         {
-            return GetGwl().tblWell;
+            return GetGwl().tblWell.ToList();
         }
 
         #endregion
