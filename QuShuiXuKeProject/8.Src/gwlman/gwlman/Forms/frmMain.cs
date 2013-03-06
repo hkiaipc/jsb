@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Diagnostics;
 using gwlDB;
+using Xdgk.Common;
 
 namespace gwlman
 {
@@ -19,6 +20,18 @@ namespace gwlman
         public frmMain()
         {
             InitializeComponent();
+            this.ucConditionWrapper1.SearchEvent += new EventHandler(ucConditionWrapper1_SearchEvent);
+            this.ucConditionWrapper1.Visible = tsbFind.Checked;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void ucConditionWrapper1_SearchEvent(object sender, EventArgs e)
+        {
+            Fill();
         }
 
         /// <summary>
@@ -74,7 +87,75 @@ namespace gwlman
             var q = from s in db.tblGwl
                     select s;
 
-            return q;
+            List<tblGwl> list = q.ToList();
+            if (tsbFind.Checked)
+            {
+                KeyValueCollection kvs = ucConditionWrapper1.GetConditionKeyValues();
+                list = Match(list, kvs);
+            }
+            return list;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="kvs"></param>
+        /// <returns></returns>
+        private List<tblGwl> Match(List<tblGwl> list, KeyValueCollection kvs)
+        {
+            List<tblGwl> r = new List<tblGwl>();
+            foreach (tblGwl item in list)
+            {
+                if (Match(item, kvs))
+                {
+                    r.Add(item);
+                }
+            }
+            return r;
+
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="kvs"></param>
+        /// <returns></returns>
+        private bool Match(tblGwl gwl, KeyValueCollection kvs)
+        {
+            foreach (KeyValue kv in kvs)
+            {
+                if (Match(gwl, kv.Key, kv.Value.ToString()))
+                {
+
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="gwl"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        private bool Match(tblGwl gwl, string propertyName, string value)
+        {
+            string propertyValue = ReflectionHelper.GetPropertyValue(gwl, propertyName).ToString();
+            if (propertyValue.Contains(value))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -82,7 +163,7 @@ namespace gwlman
         /// </summary>
         private void SetDataGridViewColumns()
         {
-            Debug.Assert(this.dataGridView1.Columns.Count == 0);   
+            Debug.Assert(this.dataGridView1.Columns.Count == 0);
             object[] list = new object[] {
                 "Serial", "编号", typeof(string),
                 "CompanyName", "单位名称", typeof(string),
@@ -169,7 +250,7 @@ namespace gwlman
             tblGwl gwl = SelectedGwl();
             if (gwl != null)
             {
-                if (NUnit.UiKit.UserMessage.Ask("确定删除吗?") == DialogResult.Yes )
+                if (NUnit.UiKit.UserMessage.Ask("确定删除吗?") == DialogResult.Yes)
                 {
                     DB db = DBFactory.CreateDB();
                     db.tblGwl.DeleteOnSubmit(db.tblGwl.Single(c => c.GwlID == gwl.GwlID));
@@ -178,6 +259,27 @@ namespace gwlman
                     Fill();
                 }
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbFind_Click(object sender, EventArgs e)
+        {
+            this.tsbFind.Checked = !this.tsbFind.Checked;
+            this.ucConditionWrapper1.Visible = this.tsbFind.Checked;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsbRefresh_Click(object sender, EventArgs e)
+        {
+            Fill();
         }
     }
 }

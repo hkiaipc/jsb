@@ -35,12 +35,14 @@
             this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ucConditionWrapper1 = new gwlman.UCConditionWrapper();
             this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.tsbEdit = new System.Windows.Forms.ToolStripButton();
             this.tsbDelete = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tsbFind = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tsbRefresh = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,7 +56,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip1.Size = new System.Drawing.Size(448, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(575, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -90,9 +92,9 @@
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 369);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 422);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(448, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(575, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
@@ -105,13 +107,40 @@
             this.tsbEdit,
             this.tsbDelete,
             this.toolStripSeparator1,
-            this.tsbFind});
+            this.tsbFind,
+            this.tsbRefresh});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(448, 35);
+            this.toolStrip1.Size = new System.Drawing.Size(575, 35);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(271, 59);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(304, 363);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // ucConditionWrapper1
+            // 
+            this.ucConditionWrapper1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ucConditionWrapper1.Location = new System.Drawing.Point(0, 59);
+            this.ucConditionWrapper1.Name = "ucConditionWrapper1";
+            this.ucConditionWrapper1.Size = new System.Drawing.Size(271, 363);
+            this.ucConditionWrapper1.TabIndex = 4;
             // 
             // tsbAdd
             // 
@@ -143,11 +172,6 @@
             this.tsbDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.tsbDelete.Click += new System.EventHandler(this.tsbDelete_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 35);
-            // 
             // tsbFind
             // 
             this.tsbFind.Image = global::gwlman.Properties.Resources.EditFind;
@@ -156,26 +180,25 @@
             this.tsbFind.Size = new System.Drawing.Size(33, 32);
             this.tsbFind.Text = "查找";
             this.tsbFind.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbFind.Click += new System.EventHandler(this.tsbFind_Click);
             // 
-            // dataGridView1
+            // tsbRefresh
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(448, 310);
-            this.dataGridView1.TabIndex = 3;
+            this.tsbRefresh.Image = global::gwlman.Properties.Resources.REFRESH;
+            this.tsbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbRefresh.Name = "tsbRefresh";
+            this.tsbRefresh.Size = new System.Drawing.Size(33, 32);
+            this.tsbRefresh.Text = "刷新";
+            this.tsbRefresh.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.tsbRefresh.Click += new System.EventHandler(this.tsbRefresh_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 391);
+            this.ClientSize = new System.Drawing.Size(575, 444);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ucConditionWrapper1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -208,6 +231,8 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton tsbFind;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private UCConditionWrapper ucConditionWrapper1;
+        private System.Windows.Forms.ToolStripButton tsbRefresh;
     }
 }
 

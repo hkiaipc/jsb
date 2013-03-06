@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Xdgk.Common;
 
 namespace gwlman
 {
@@ -25,6 +26,7 @@ namespace gwlman
         {
             InitializeComponent();
             _height = txtValue1.Size.Height + 4;
+            SetCmbConditionDataSource(this.cmbCondition1);
         }
 
         /// <summary>
@@ -41,7 +43,7 @@ namespace gwlman
                 ComboBox cmb = new ComboBox();
                 _conditionCount++;
                 cmb.Name = _cmbBaseName + _conditionCount;
-                cmb.DataSource = GetConditionDataSource();
+                SetCmbConditionDataSource(cmb);
                 cmb.Size = cmbCondition1.Size;
                 cmb.Location = GetConditionLocation(_conditionCount);
                 cmb.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -63,18 +65,29 @@ namespace gwlman
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="cmb"></param>
+        private void SetCmbConditionDataSource(ComboBox cmb)
+        {
+            cmb.DisplayMember = "Key";
+            cmb.ValueMember = "Value";
+            cmb.DataSource = GetConditionDataSource();
+        }
+
         private Point GetTxtLocation(int n)
         {
             return new Point(
-                txtValue1.Location.X ,
+                txtValue1.Location.X,
                 txtValue1.Location.Y + (n - 1) * _height);
         }
 
         private Point GetConditionLocation(int n)
         {
             return new Point(
-                cmbCondition1.Location.X ,
-                cmbCondition1.Location.Y + (n - 1) * _height 
+                cmbCondition1.Location.X,
+                cmbCondition1.Location.Y + (n - 1) * _height
                 );
         }
 
@@ -84,8 +97,7 @@ namespace gwlman
         /// <returns></returns>
         private object GetConditionDataSource()
         {
-            //throw new NotImplementedException();
-            return null;
+            return ConditionDataSourceProvider.CreateDataSource();
         }
 
         /// <summary>
@@ -116,6 +128,40 @@ namespace gwlman
                 btnAdd.Location = new Point(btnAdd.Location.X, btnAdd.Location.Y - _height);
                 btnDelete.Location = new Point(btnDelete.Location.X, btnDelete.Location.Y - _height);
             }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public KeyValueCollection GetConditionKeyValues()
+        {
+            KeyValueCollection kvs = new KeyValueCollection();
+            for (int i = 1; i <= _conditionCount; i++)
+            {
+                ComboBox cmb = (ComboBox)this.Controls.Find(_cmbBaseName + i, false)[0];
+                TextBox txt = (TextBox)this.Controls.Find(_txtBaseName + i, false)[0];
+                if (txt.Text.Trim().Length > 0)
+                {
+                    if (!ExistKey(kvs, cmb.SelectedValue.ToString()))
+                    {
+                        kvs.Add(new KeyValue(cmb.SelectedValue.ToString(), txt.Text.Trim()));
+                    }
+                }
+            }
+            return kvs;
+        }
+
+        private bool ExistKey(KeyValueCollection kvs, string key)
+        {
+            foreach (KeyValue kv in kvs)
+            {
+                if (kv.Key == key)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

@@ -62,11 +62,10 @@
             this.lblConditionName.Name = "lblConditionName";
             this.lblConditionName.Size = new System.Drawing.Size(100, 21);
             this.lblConditionName.TabIndex = 2;
-            this.lblConditionName.Text = "条件";
+            this.lblConditionName.Text = "名称";
             // 
             // lblValue
             // 
-            this.lblValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblValue.Location = new System.Drawing.Point(106, 0);
             this.lblValue.Name = "lblValue";
             this.lblValue.Size = new System.Drawing.Size(150, 21);
@@ -75,6 +74,7 @@
             // 
             // cmbCondition1
             // 
+            this.cmbCondition1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCondition1.FormattingEnabled = true;
             this.cmbCondition1.Location = new System.Drawing.Point(0, 24);
             this.cmbCondition1.Name = "cmbCondition1";

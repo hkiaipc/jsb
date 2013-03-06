@@ -88,6 +88,13 @@ namespace gwlman.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap REFRESH {
+            get {
+                object obj = ResourceManager.GetObject("REFRESH", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);

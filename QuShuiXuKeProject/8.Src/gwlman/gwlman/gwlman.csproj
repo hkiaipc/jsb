@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ConditionDataSourceProvider.cs" />
     <Compile Include="DBFactory.cs" />
     <Compile Include="Forms\frmGwlItem.cs">
       <SubType>Form</SubType>
@@ -108,6 +109,10 @@
       <DependentUpon>UCCondition.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCConditionWrapper.resx">
+      <DependentUpon>UCConditionWrapper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -129,6 +134,12 @@
     <Compile Include="UCCondition.Designer.cs">
       <DependentUpon>UCCondition.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCConditionWrapper.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCConditionWrapper.Designer.cs">
+      <DependentUpon>UCConditionWrapper.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\gwlDB\gwlDB.csproj">
@@ -141,6 +152,7 @@
     <Content Include="Resource\Delete.ico" />
     <None Include="Resource\EditFind.ico" />
     <Content Include="Resource\New.ico" />
+    <Content Include="Resource\REFRESH.ICO" />
     <Content Include="Resource\search.bmp" />
   </ItemGroup>
   <ItemGroup>
