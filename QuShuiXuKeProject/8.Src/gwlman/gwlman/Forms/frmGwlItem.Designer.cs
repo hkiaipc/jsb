@@ -578,6 +578,7 @@
             this.dgvWell.RowTemplate.Height = 23;
             this.dgvWell.Size = new System.Drawing.Size(488, 247);
             this.dgvWell.TabIndex = 2;
+            this.dgvWell.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWell_CellDoubleClick);
             // 
             // lblWellCount
             // 

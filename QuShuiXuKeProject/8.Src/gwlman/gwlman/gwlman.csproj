@@ -55,9 +55,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="ConditionDataSourceProvider.cs" />
-    <Compile Include="DBFactory.cs" />
+    <Compile Include="Code\IAddEdit.cs" />
+    <Compile Include="Code\ConditionDataSourceProvider.cs" />
+    <Compile Include="Code\DBFactory.cs" />
     <Compile Include="Forms\frmGwlItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,10 +76,10 @@
     <Compile Include="Forms\frmWellItem.Designer.cs">
       <DependentUpon>frmWellItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUCConditionTest.cs">
+    <Compile Include="Forms\frmUCConditionTest.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUCConditionTest.Designer.cs">
+    <Compile Include="Forms\frmUCConditionTest.Designer.cs">
       <DependentUpon>frmUCConditionTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -96,7 +96,7 @@
       <DependentUpon>frmWellItem.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUCConditionTest.resx">
+    <EmbeddedResource Include="Forms\frmUCConditionTest.resx">
       <DependentUpon>frmUCConditionTest.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -105,11 +105,11 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCCondition.resx">
+    <EmbeddedResource Include="UC\UCCondition.resx">
       <DependentUpon>UCCondition.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCConditionWrapper.resx">
+    <EmbeddedResource Include="UC\UCConditionWrapper.resx">
       <DependentUpon>UCConditionWrapper.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -128,16 +128,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UCCondition.cs">
+    <Compile Include="UC\UCCondition.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCCondition.Designer.cs">
+    <Compile Include="UC\UCCondition.Designer.cs">
       <DependentUpon>UCCondition.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCConditionWrapper.cs">
+    <Compile Include="UC\UCConditionWrapper.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCConditionWrapper.Designer.cs">
+    <Compile Include="UC\UCConditionWrapper.Designer.cs">
       <DependentUpon>UCConditionWrapper.cs</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -154,9 +154,6 @@
     <Content Include="Resource\New.ico" />
     <Content Include="Resource\REFRESH.ICO" />
     <Content Include="Resource\search.bmp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Code\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

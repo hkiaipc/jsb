@@ -631,5 +631,11 @@ namespace gwlman
             }
         }
         #endregion //SetWellDataGridViewColumns
+
+        private void dgvWell_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnWellEdit_Click(null, null);
+        }
+
     }
 }

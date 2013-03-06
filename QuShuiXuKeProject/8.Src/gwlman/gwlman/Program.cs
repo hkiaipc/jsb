@@ -2,9 +2,31 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Xdgk.Common;
 
 namespace gwlman
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    class App : AppBase 
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        public override Form MainForm
+        {
+            get
+            {
+                if (_frmMain == null)
+                {
+                    _frmMain = new frmMain();
+                }
+                return _frmMain;
+            }
+        } private frmMain _frmMain;
+    }
+
     static class Program
     {
         /// <summary>
@@ -13,10 +35,7 @@ namespace gwlman
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
-            //Application.Run(new frmUCConditionTest ());
+            new App().Run();
         }
     }
 }

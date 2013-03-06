@@ -22,6 +22,7 @@ namespace gwlman
             InitializeComponent();
             this.ucConditionWrapper1.SearchEvent += new EventHandler(ucConditionWrapper1_SearchEvent);
             this.ucConditionWrapper1.Visible = tsbFind.Checked;
+            this.Text = System.Configuration.ConfigurationSettings.AppSettings["Text"];
         }
 
         /// <summary>
@@ -41,7 +42,10 @@ namespace gwlman
         /// <param name="e"></param>
         private void mnuAbout_Click(object sender, EventArgs e)
         {
-
+            string msg = string.Format("{0}\r\n\r\nV{1}", 
+                System.Configuration.ConfigurationSettings.AppSettings["Text"],
+                Application.ProductVersion);
+            NUnit.UiKit.UserMessage.DisplayInfo(msg);
         }
 
         /// <summary>
@@ -280,6 +284,11 @@ namespace gwlman
         private void tsbRefresh_Click(object sender, EventArgs e)
         {
             Fill();
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tsbEdit_Click(null, null);
         }
     }
 }
